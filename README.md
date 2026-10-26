@@ -70,7 +70,7 @@ MCP adds no response-content cache. Underlying API cache duration depends on end
 
 ## Ready-to-use workflows
 
-The [setup guide](https://jsonscraper.com/mcp#recipes) includes 14 workflows, with separate TikTok and Instagram tabs. Each begins with a profile overview, followed by video discovery, competitors, comments, creator search, content ideas and comparison snapshots. More workflows expand progressively.
+The [setup guide](https://jsonscraper.com/mcp#recipes) includes 40 workflows (20 per product), with separate TikTok and Instagram tabs. Each begins with a profile overview, followed by video discovery, competitors, comments, creator search, content ideas and comparison snapshots. All 20 workflows on the selected product tab are visible immediately. Examples cover hashtag niches, music, locations, pinned posts, comment threads and license checks; each uses a bounded retrieval plan and its relevant API tools.
 
 ## License status and quota
 
