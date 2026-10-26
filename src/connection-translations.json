@@ -8,7 +8,10 @@
     "remove": "Remove key",
     "connect": "Connect",
     "invalid": "Check the license for:",
-    "required": "Add at least one valid API license."
+    "required": "Add at least one valid API license.",
+    "license_info": "Licenses and request quota",
+    "license_prompt": "Check my connected licenses: status, expiration date and remaining API requests.",
+    "license_help": "This check uses the keys already connected. It does not consume social-data API requests."
   },
   "ru": {
     "title": "Подключить jsonscraper",
@@ -19,7 +22,10 @@
     "remove": "Удалить ключ",
     "connect": "Подключить",
     "invalid": "Проверьте лицензию:",
-    "required": "Добавьте хотя бы один действующий ключ API."
+    "required": "Добавьте хотя бы один действующий ключ API.",
+    "license_info": "Лицензии и остаток запросов",
+    "license_prompt": "Проверь мои подключённые лицензии: статус, срок действия и остаток запросов API.",
+    "license_help": "Проверка использует уже подключённые ключи и не расходует запросы к данным соцсетей."
   },
   "uk": {
     "title": "Підключити jsonscraper",
@@ -30,7 +36,10 @@
     "remove": "Видалити ключ",
     "connect": "Підключити",
     "invalid": "Перевірте ліцензію:",
-    "required": "Додайте хоча б один чинний ключ API."
+    "required": "Додайте хоча б один чинний ключ API.",
+    "license_info": "Ліцензії та залишок запитів",
+    "license_prompt": "Перевір мої підключені ліцензії: статус, термін дії та залишок запитів API.",
+    "license_help": "Перевірка використовує вже підключені ключі та не витрачає запити до даних соцмереж."
   },
   "de": {
     "title": "jsonscraper verbinden",
@@ -41,7 +50,10 @@
     "remove": "Schlüssel entfernen",
     "connect": "Verbinden",
     "invalid": "Lizenz prüfen:",
-    "required": "Fügen Sie mindestens eine gültige API-Lizenz hinzu."
+    "required": "Fügen Sie mindestens eine gültige API-Lizenz hinzu.",
+    "license_info": "Lizenzen und Anfragekontingent",
+    "license_prompt": "Prüfe meine verbundenen Lizenzen: Status, Ablaufdatum und verbleibende API-Anfragen.",
+    "license_help": "Die Prüfung nutzt bereits verbundene Schlüssel und verbraucht keine Social-Data-API-Anfragen."
   },
   "fr": {
     "title": "Connecter jsonscraper",
@@ -52,7 +64,10 @@
     "remove": "Retirer la clé",
     "connect": "Connecter",
     "invalid": "Vérifiez la licence :",
-    "required": "Ajoutez au moins une licence API valide."
+    "required": "Ajoutez au moins une licence API valide.",
+    "license_info": "Licences et quota de requêtes",
+    "license_prompt": "Vérifie mes licences connectées : statut, date d’expiration et requêtes API restantes.",
+    "license_help": "La vérification utilise les clés déjà connectées et ne consomme aucune requête de données sociales."
   },
   "es": {
     "title": "Conectar jsonscraper",
@@ -63,7 +78,10 @@
     "remove": "Quitar clave",
     "connect": "Conectar",
     "invalid": "Verifica la licencia:",
-    "required": "Añade al menos una licencia API válida."
+    "required": "Añade al menos una licencia API válida.",
+    "license_info": "Licencias y cuota de solicitudes",
+    "license_prompt": "Revisa mis licencias conectadas: estado, fecha de vencimiento y solicitudes API restantes.",
+    "license_help": "La comprobación usa las claves conectadas y no consume solicitudes de datos sociales."
   },
   "it": {
     "title": "Collega jsonscraper",
@@ -74,7 +92,10 @@
     "remove": "Rimuovi chiave",
     "connect": "Collega",
     "invalid": "Verifica la licenza:",
-    "required": "Aggiungi almeno una licenza API valida."
+    "required": "Aggiungi almeno una licenza API valida.",
+    "license_info": "Licenze e richieste disponibili",
+    "license_prompt": "Verifica le mie licenze collegate: stato, scadenza e richieste API rimanenti.",
+    "license_help": "La verifica usa le chiavi già collegate e non consuma richieste di dati social."
   },
   "pt": {
     "title": "Conectar jsonscraper",
@@ -85,7 +106,10 @@
     "remove": "Remover chave",
     "connect": "Conectar",
     "invalid": "Verifique a licença:",
-    "required": "Adicione pelo menos uma licença API válida."
+    "required": "Adicione pelo menos uma licença API válida.",
+    "license_info": "Licenças e saldo de requisições",
+    "license_prompt": "Verifique minhas licenças conectadas: status, validade e requisições API restantes.",
+    "license_help": "A verificação usa as chaves já conectadas e não consome requisições de dados sociais."
   },
   "nl": {
     "title": "jsonscraper verbinden",
@@ -96,7 +120,10 @@
     "remove": "Sleutel verwijderen",
     "connect": "Verbinden",
     "invalid": "Controleer de licentie:",
-    "required": "Voeg minstens één geldige API-licentie toe."
+    "required": "Voeg minstens één geldige API-licentie toe.",
+    "license_info": "Licenties en aanvraagquotum",
+    "license_prompt": "Controleer mijn gekoppelde licenties: status, vervaldatum en resterende API-aanvragen.",
+    "license_help": "De controle gebruikt gekoppelde sleutels en verbruikt geen aanvragen voor sociale data."
   },
   "sv": {
     "title": "Anslut jsonscraper",
@@ -107,7 +134,10 @@
     "remove": "Ta bort nyckel",
     "connect": "Anslut",
     "invalid": "Kontrollera licensen:",
-    "required": "Lägg till minst en giltig API-licens."
+    "required": "Lägg till minst en giltig API-licens.",
+    "license_info": "Licenser och anropskvot",
+    "license_prompt": "Kontrollera mina anslutna licenser: status, utgångsdatum och återstående API-anrop.",
+    "license_help": "Kontrollen använder anslutna nycklar och förbrukar inga anrop för sociala data."
   },
   "no": {
     "title": "Koble til jsonscraper",
@@ -118,7 +148,10 @@
     "remove": "Fjern nøkkel",
     "connect": "Koble til",
     "invalid": "Kontroller lisensen:",
-    "required": "Legg til minst én gyldig API-lisens."
+    "required": "Legg til minst én gyldig API-lisens.",
+    "license_info": "Lisenser og forespørselskvote",
+    "license_prompt": "Sjekk mine tilkoblede lisenser: status, utløpsdato og gjenværende API-forespørsler.",
+    "license_help": "Kontrollen bruker tilkoblede nøkler og forbruker ingen forespørsler etter sosiale data."
   },
   "fi": {
     "title": "Yhdistä jsonscraper",
@@ -129,7 +162,10 @@
     "remove": "Poista avain",
     "connect": "Yhdistä",
     "invalid": "Tarkista lisenssi:",
-    "required": "Lisää vähintään yksi voimassa oleva API-lisenssi."
+    "required": "Lisää vähintään yksi voimassa oleva API-lisenssi.",
+    "license_info": "Lisenssit ja jäljellä olevat pyynnöt",
+    "license_prompt": "Tarkista yhdistettyjen lisenssieni tila, päättymispäivä ja jäljellä olevat API-pyynnöt.",
+    "license_help": "Tarkistus käyttää yhdistettyjä avaimia eikä kuluta sosiaalisen datan API-pyyntöjä."
   },
   "pl": {
     "title": "Połącz jsonscraper",
@@ -140,7 +176,10 @@
     "remove": "Usuń klucz",
     "connect": "Połącz",
     "invalid": "Sprawdź licencję:",
-    "required": "Dodaj co najmniej jedną ważną licencję API."
+    "required": "Dodaj co najmniej jedną ważną licencję API.",
+    "license_info": "Licencje i pozostałe zapytania",
+    "license_prompt": "Sprawdź moje połączone licencje: status, datę wygaśnięcia i pozostałe zapytania API.",
+    "license_help": "Sprawdzenie używa połączonych kluczy i nie zużywa zapytań o dane społecznościowe."
   },
   "cs": {
     "title": "Připojit jsonscraper",
@@ -151,7 +190,10 @@
     "remove": "Odebrat klíč",
     "connect": "Připojit",
     "invalid": "Ověřte licenci:",
-    "required": "Přidejte alespoň jednu platnou licenci API."
+    "required": "Přidejte alespoň jednu platnou licenci API.",
+    "license_info": "Licence a zbývající požadavky",
+    "license_prompt": "Zkontroluj mé připojené licence: stav, datum vypršení a zbývající požadavky API.",
+    "license_help": "Kontrola používá připojené klíče a nespotřebovává požadavky na sociální data."
   },
   "tr": {
     "title": "jsonscraper bağlantısı",
@@ -162,7 +204,10 @@
     "remove": "Anahtarı kaldır",
     "connect": "Bağlan",
     "invalid": "Lisansı kontrol edin:",
-    "required": "En az bir geçerli API lisansı ekleyin."
+    "required": "En az bir geçerli API lisansı ekleyin.",
+    "license_info": "Lisanslar ve istek kotası",
+    "license_prompt": "Bağlı lisanslarımı kontrol et: durum, son geçerlilik tarihi ve kalan API istekleri.",
+    "license_help": "Kontrol bağlı anahtarları kullanır ve sosyal veri API istek kotasını tüketmez."
   },
   "ja": {
     "title": "jsonscraper に接続",
@@ -173,7 +218,10 @@
     "remove": "キーを削除",
     "connect": "接続",
     "invalid": "ライセンスを確認してください：",
-    "required": "有効な API ライセンスを1つ以上追加してください。"
+    "required": "有効な API ライセンスを1つ以上追加してください。",
+    "license_info": "ライセンスと残りのリクエスト数",
+    "license_prompt": "接続済みライセンスの状態、有効期限、残りの API リクエスト数を確認してください。",
+    "license_help": "接続済みのキーで確認します。ソーシャルデータの API リクエスト枠は消費しません。"
   },
   "ko": {
     "title": "jsonscraper 연결",
@@ -184,7 +232,10 @@
     "remove": "키 삭제",
     "connect": "연결",
     "invalid": "라이선스를 확인하세요:",
-    "required": "유효한 API 라이선스를 하나 이상 추가하세요."
+    "required": "유효한 API 라이선스를 하나 이상 추가하세요.",
+    "license_info": "라이선스 및 남은 요청 수",
+    "license_prompt": "연결된 라이선스의 상태, 만료일 및 남은 API 요청 수를 확인해 주세요.",
+    "license_help": "연결된 키로 확인하며 소셜 데이터 API 요청 한도를 사용하지 않습니다."
   },
   "zh": {
     "title": "连接 jsonscraper",
@@ -195,7 +246,10 @@
     "remove": "移除密钥",
     "connect": "连接",
     "invalid": "请检查许可证：",
-    "required": "请至少添加一个有效的 API 许可证。"
+    "required": "请至少添加一个有效的 API 许可证。",
+    "license_info": "许可证与剩余请求配额",
+    "license_prompt": "检查我已连接许可证的状态、到期日期和剩余 API 请求数。",
+    "license_help": "检查使用已连接的密钥，不消耗社交数据 API 请求配额。"
   },
   "ar": {
     "title": "ربط jsonscraper",
@@ -206,7 +260,10 @@
     "remove": "إزالة المفتاح",
     "connect": "ربط",
     "invalid": "تحقق من الترخيص:",
-    "required": "أضف ترخيص API صالحًا واحدًا على الأقل."
+    "required": "أضف ترخيص API صالحًا واحدًا على الأقل.",
+    "license_info": "التراخيص وحصة الطلبات",
+    "license_prompt": "تحقق من تراخيصي المتصلة: الحالة وتاريخ الانتهاء وعدد طلبات API المتبقية.",
+    "license_help": "يستخدم الفحص المفاتيح المتصلة ولا يستهلك حصة طلبات بيانات التواصل الاجتماعي."
   },
   "he": {
     "title": "חיבור jsonscraper",
@@ -217,6 +274,9 @@
     "remove": "הסרת מפתח",
     "connect": "חיבור",
     "invalid": "יש לבדוק את הרישיון:",
-    "required": "יש להוסיף לפחות רישיון API תקף אחד."
+    "required": "יש להוסיף לפחות רישיון API תקף אחד.",
+    "license_info": "רישיונות ומכסת בקשות",
+    "license_prompt": "בדוק את הרישיונות המחוברים שלי: מצב, תאריך תפוגה ובקשות API שנותרו.",
+    "license_help": "הבדיקה משתמשת במפתחות המחוברים ואינה צורכת בקשות לנתונים חברתיים."
   }
 }

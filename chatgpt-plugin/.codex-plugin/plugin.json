@@ -1,6 +1,6 @@
 {
   "name": "jsonscraper",
-  "version": "1.1.1",
+  "version": "1.1.3",
   "description": "Read profiles, posts, comments and available statistics through licensed jsonscraper APIs.",
   "author": {
     "name": "Yuliya Fitinina",
@@ -19,7 +19,7 @@
   ],
   "interface": {
     "displayName": "jsonscraper",
-    "shortDescription": "Structured social data for your workflows",
+    "shortDescription": "Structured social data",
     "longDescription": "Retrieve Instagram and TikTok profiles, posts, comments, search results and available statistics through jsonscraper APIs. Connect one or both product licenses on the secure authorization page. Each product has its own license, plan and request quota. Tools retrieve data and do not publish posts, send messages or manage accounts. Availability depends on the source and endpoint; do not assume every returned field is available or current. jsonscraper is an independent service, not affiliated with Meta or TikTok.",
     "developerName": "Yuliya Fitinina",
     "category": "Developer Tools",
@@ -71,13 +71,10 @@
               "expected_behavior": "Summarize the returned public account data; identify absent fields."
             },
             {
-              "description": "Compare available statistics across connected products",
-              "prompt": "Read Instagram profile apple and TikTok profile therock. Present returned statistics separately, using at most two API requests.",
-              "tools_triggered": [
-                "instagram_v1_user_by_username",
-                "tiktok_get_user_info"
-              ],
-              "expected_behavior": "Use each product license only for its own tool. Identify missing data and do not imply metrics are directly equivalent."
+              "description": "Check connected license expiration and request quota",
+              "prompt": "Check my connected jsonscraper licenses: status, expiration and requests remaining.",
+              "tools_triggered": "jsonscraper_get_license_info",
+              "expected_behavior": "Show only connected products, distinguish unknown values from zero, show effective demo quota separately, omit secrets and link only to https://evelode.com/licenses/ for existing account details."
             }
           ],
           "negative": [
@@ -99,7 +96,7 @@
         "commerce_description": "The plugin does not sell products or process payments. An existing paid API license and normal plan quota are required."
       },
       "publication": {
-        "release_notes": "One jsonscraper connection at https://mcp.jsonscraper.com. Independently verify Instagram and TikTok licenses, connect one or both, and expose only entitled tools. Unified icon, review login and setup documentation. No checkout links in authorization."
+        "release_notes": "One jsonscraper connection at https://mcp.jsonscraper.com. Independently verify Instagram and TikTok licenses, connect one or both, and expose only entitled tools. Unified icon, review login and setup documentation. No checkout links in authorization. Added one read-only license information tool for connected product status, expiration and request quota without consuming social-data requests. Existing account details link contains no credentials."
       }
     }
   }

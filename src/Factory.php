@@ -15,13 +15,13 @@ final class Factory {
   $adapter=getenv('JSONSCRAPER_MCP_LICENSE_VALIDATOR');
   return static function(string $license,string $product)use($adapter):bool{
    if($adapter){$validator=require $adapter;if(!$validator instanceof \Closure)throw new \RuntimeException('Invalid license validator.');return $validator($license);}
-   try{$reply=self::fetch($product,$product==='instagram'?'/v1/user/by/username':'/getUserInfo',$product==='instagram'?['username'=>'apple','cache_timeout'=>300]:['query'=>'therock','cache_timeout'=>300],$license);return ($reply['status']??null)==='ok';}catch(\Throwable){return false;}
+   try{$reply=LicenseInfo::request('getRemoteLicenseInfo',['download_id'=>LicenseInfo::PRODUCTS[$product]],$license);return ($reply['license_status']??'')==='valid'&&(int)($reply['license']['download_id']??0)===LicenseInfo::PRODUCTS[$product];}catch(\Throwable){return false;}
   };
  }
  public static function protocol(?\Closure $fetch=null):Protocol {
   $fetch??=static fn($product,$path,$args,$key)=>self::fetch($product,$path,$args,$key);$protocols=[];
   foreach(['instagram'=>'Instagram','tiktok'=>'Tiktok'] as $product=>$label){$class=__NAMESPACE__.'\\Products\\'.$label.'\\Protocol';$protocols[$product]=new $class($product,$label,json_decode(file_get_contents(__DIR__.'/../docs/'.$product.'-endpoints.json'),true,64,JSON_THROW_ON_ERROR),static fn($path,$args,$key)=>$fetch($product,$path,$args,$key));}
-  return new Protocol($protocols);
+  $infoAdapter=getenv('JSONSCRAPER_MCP_LICENSE_INFO');$reader=$infoAdapter?require $infoAdapter:null;if($reader!==null&&!$reader instanceof \Closure)throw new \RuntimeException('Invalid license info adapter.');return new Protocol($protocols,new LicenseInfo($reader));
  }
  private static function fetch(string $product,string $path,array $args,string $license):array {
   $base=$product==='instagram'?'https://ig.jsonscraper.com':'https://tiktok.evelode.com';$args['license_key']=$license;$curl=curl_init($base.$path.'?'.http_build_query($args,'','&',PHP_QUERY_RFC3986));
