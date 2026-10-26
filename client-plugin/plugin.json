@@ -1,0 +1,48 @@
+{
+  "name": "jsonscraper",
+  "version": "1.1.1",
+  "description": "Read profiles, posts, comments and available statistics through licensed jsonscraper APIs.",
+  "author": {
+    "name": "Yuliya Fitinina",
+    "url": "https://jsonscraper.com",
+    "email": "plugins@jsonscraper.com"
+  },
+  "homepage": "https://jsonscraper.com/mcp",
+  "repository": "https://github.com/jsonscraper/mcp-server",
+  "license": "MIT",
+  "keywords": [
+    "jsonscraper",
+    "API",
+    "analytics",
+    "profiles",
+    "MCP"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "jsonscraper",
+        "shortDescription": "Structured social data for your workflows",
+        "longDescription": "Retrieve Instagram and TikTok profiles, posts, comments, search results and available statistics through jsonscraper APIs. Connect one or both product licenses on the secure authorization page. Each product has its own license, plan and request quota. Tools retrieve data and do not publish posts, send messages or manage accounts. Availability depends on the source and endpoint; do not assume every returned field is available or current. jsonscraper is an independent service, not affiliated with Meta or TikTok.",
+        "developerName": "Yuliya Fitinina",
+        "category": "Developer Tools",
+        "capabilities": [
+          "Read public profiles",
+          "Read public media",
+          "Search public data"
+        ],
+        "websiteURL": "https://jsonscraper.com/mcp",
+        "supportURL": "https://jsonscraper.com/contacts",
+        "privacyPolicyURL": "https://jsonscraper.com/privacy-policy",
+        "termsOfServiceURL": "https://jsonscraper.com/terms-of-service",
+        "defaultPrompt": [
+          "Read the Instagram profile apple and summarize the returned statistics. Use one request.",
+          "Read the TikTok profile therock and summarize the returned statistics. Use one request."
+        ],
+        "brandColor": "#ff5e00",
+        "composerIcon": "./assets/icon.png",
+        "logo": "./assets/icon.png"
+      },
+      "onboardingSkill": "./skills/setup/SKILL.md"
+    }
+  }
+}

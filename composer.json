@@ -1,0 +1,45 @@
+{
+  "name": "jsonscraper/mcp-server",
+  "description": "jsonscraper MCP server with independently licensed Instagram and TikTok tools",
+  "type": "library",
+  "license": "MIT",
+  "require": {
+    "php": ">=8.1",
+    "ext-curl": "*",
+    "ext-json": "*",
+    "ext-sodium": "*",
+    "predis/predis": "^2.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "JsonScraper\\Mcp\\": "src/",
+      "JsonScraper\\Mcp\\Products\\Instagram\\": "src/products/instagram/",
+      "JsonScraper\\Mcp\\Products\\Tiktok\\": "src/products/tiktok/"
+    },
+    "classmap": [
+      "src/Store.php",
+      "src/Http.php"
+    ]
+  },
+  "scripts": {
+    "test": "php tests/contract.php"
+  },
+  "homepage": "https://jsonscraper.com/mcp",
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "instagram",
+    "instagram-api",
+    "instagram-scraper",
+    "chatgpt",
+    "codex",
+    "claude"
+  ],
+  "support": {
+    "issues": "https://github.com/jsonscraper/mcp-server/issues",
+    "source": "https://github.com/jsonscraper/mcp-server"
+  },
+  "bin": [
+    "bin/jsonscraper-mcp"
+  ]
+}

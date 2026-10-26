@@ -1,0 +1,32 @@
+{
+  "name": "jsonscraper",
+  "version": "1.1.1",
+  "description": "Read profiles, posts, comments and available statistics through licensed jsonscraper APIs.",
+  "author": {
+    "name": "Yuliya Fitinina",
+    "url": "https://jsonscraper.com",
+    "email": "plugins@jsonscraper.com"
+  },
+  "homepage": "https://jsonscraper.com/mcp",
+  "repository": "https://github.com/jsonscraper/mcp-server",
+  "license": "MIT",
+  "keywords": [
+    "jsonscraper",
+    "API",
+    "analytics",
+    "profiles",
+    "MCP"
+  ],
+  "displayName": "jsonscraper",
+  "icon": "./assets/icon.png",
+  "documentationUrl": "https://jsonscraper.com/mcp?client=claude#connect",
+  "supportUrl": "https://jsonscraper.com/contacts",
+  "privacyPolicyUrl": "https://jsonscraper.com/privacy-policy",
+  "termsOfServiceUrl": "https://jsonscraper.com/terms-of-service",
+  "mcpServers": {
+    "jsonscraper": {
+      "type": "http",
+      "url": "https://mcp.jsonscraper.com"
+    }
+  }
+}

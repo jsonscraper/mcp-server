@@ -1,0 +1,12 @@
+#!/usr/bin/env php
+<?php
+declare(strict_types=1);
+require dirname(__DIR__).'/vendor/autoload.php';
+use JsonScraper\Mcp\Factory;
+try{
+ $verify=Factory::validator();$licenses=[];
+ foreach(['instagram','tiktok'] as $product){$key=getenv('JSONSCRAPER_'.strtoupper($product).'_LICENSE_KEY');if($key!==false&&$key!==''){if(!$verify($key,$product))throw new RuntimeException('License validation failed for '.$product.'.');$licenses[$product]=$key;}}
+ if(!$licenses)throw new RuntimeException('Set at least one product license environment variable.');
+ $protocol=Factory::protocol();$bundle=json_encode($licenses,JSON_THROW_ON_ERROR);
+ while(($line=fgets(STDIN,262146))!==false){try{if(strlen($line)>262144||!str_ends_with($line,"\n"))throw new InvalidArgumentException();$request=json_decode($line,true,32,JSON_THROW_ON_ERROR);if(!is_array($request))throw new InvalidArgumentException();$reply=$protocol->dispatch($request,$bundle);}catch(Throwable){$reply=['jsonrpc'=>'2.0','id'=>null,'error'=>['code'=>-32700,'message'=>'Invalid JSON-RPC object.']];}if($reply!==null){fwrite(STDOUT,json_encode($reply,JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE|JSON_INVALID_UTF8_SUBSTITUTE)."\n");fflush(STDOUT);}}
+}catch(Throwable $error){fwrite(STDERR,"jsonscraper MCP could not start. Check product licenses and connection settings.\n");exit(1);}

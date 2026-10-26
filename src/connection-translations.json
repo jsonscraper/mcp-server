@@ -1,0 +1,222 @@
+{
+  "en": {
+    "title": "Connect jsonscraper",
+    "intro": "Add an Instagram or TikTok API license, or both. Each product keeps its own plan and request limits.",
+    "key": "API license key",
+    "check": "Check key",
+    "connected": "Connected",
+    "remove": "Remove key",
+    "connect": "Connect",
+    "invalid": "Check the license for:",
+    "required": "Add at least one valid API license."
+  },
+  "ru": {
+    "title": "Подключить jsonscraper",
+    "intro": "Добавьте ключ Instagram или TikTok API либо оба ключа. У каждого продукта сохраняются свои тариф и лимиты запросов.",
+    "key": "Лицензионный ключ API",
+    "check": "Проверить ключ",
+    "connected": "Подключено",
+    "remove": "Удалить ключ",
+    "connect": "Подключить",
+    "invalid": "Проверьте лицензию:",
+    "required": "Добавьте хотя бы один действующий ключ API."
+  },
+  "uk": {
+    "title": "Підключити jsonscraper",
+    "intro": "Додайте ключ Instagram або TikTok API чи обидва ключі. Кожен продукт має власні тариф і ліміти запитів.",
+    "key": "Ліцензійний ключ API",
+    "check": "Перевірити ключ",
+    "connected": "Підключено",
+    "remove": "Видалити ключ",
+    "connect": "Підключити",
+    "invalid": "Перевірте ліцензію:",
+    "required": "Додайте хоча б один чинний ключ API."
+  },
+  "de": {
+    "title": "jsonscraper verbinden",
+    "intro": "Fügen Sie eine Instagram- oder TikTok-API-Lizenz oder beide hinzu. Tarif und Anfragelimits gelten je Produkt.",
+    "key": "API-Lizenzschlüssel",
+    "check": "Schlüssel prüfen",
+    "connected": "Verbunden",
+    "remove": "Schlüssel entfernen",
+    "connect": "Verbinden",
+    "invalid": "Lizenz prüfen:",
+    "required": "Fügen Sie mindestens eine gültige API-Lizenz hinzu."
+  },
+  "fr": {
+    "title": "Connecter jsonscraper",
+    "intro": "Ajoutez une licence API Instagram ou TikTok, ou les deux. Chaque produit conserve son forfait et ses limites.",
+    "key": "Clé de licence API",
+    "check": "Vérifier la clé",
+    "connected": "Connecté",
+    "remove": "Retirer la clé",
+    "connect": "Connecter",
+    "invalid": "Vérifiez la licence :",
+    "required": "Ajoutez au moins une licence API valide."
+  },
+  "es": {
+    "title": "Conectar jsonscraper",
+    "intro": "Añade una licencia de API de Instagram o TikTok, o ambas. Cada producto mantiene su plan y sus límites.",
+    "key": "Clave de licencia API",
+    "check": "Verificar clave",
+    "connected": "Conectado",
+    "remove": "Quitar clave",
+    "connect": "Conectar",
+    "invalid": "Verifica la licencia:",
+    "required": "Añade al menos una licencia API válida."
+  },
+  "it": {
+    "title": "Collega jsonscraper",
+    "intro": "Aggiungi una licenza API Instagram o TikTok, oppure entrambe. Ogni prodotto mantiene il proprio piano e i limiti.",
+    "key": "Chiave di licenza API",
+    "check": "Verifica chiave",
+    "connected": "Collegato",
+    "remove": "Rimuovi chiave",
+    "connect": "Collega",
+    "invalid": "Verifica la licenza:",
+    "required": "Aggiungi almeno una licenza API valida."
+  },
+  "pt": {
+    "title": "Conectar jsonscraper",
+    "intro": "Adicione uma licença API do Instagram ou TikTok, ou ambas. Cada produto mantém seu plano e limites.",
+    "key": "Chave de licença API",
+    "check": "Verificar chave",
+    "connected": "Conectado",
+    "remove": "Remover chave",
+    "connect": "Conectar",
+    "invalid": "Verifique a licença:",
+    "required": "Adicione pelo menos uma licença API válida."
+  },
+  "nl": {
+    "title": "jsonscraper verbinden",
+    "intro": "Voeg een Instagram- of TikTok-API-licentie toe, of beide. Elk product behoudt zijn eigen abonnement en limieten.",
+    "key": "API-licentiesleutel",
+    "check": "Sleutel controleren",
+    "connected": "Verbonden",
+    "remove": "Sleutel verwijderen",
+    "connect": "Verbinden",
+    "invalid": "Controleer de licentie:",
+    "required": "Voeg minstens één geldige API-licentie toe."
+  },
+  "sv": {
+    "title": "Anslut jsonscraper",
+    "intro": "Lägg till en API-licens för Instagram eller TikTok, eller båda. Varje produkt har eget abonnemang och egna gränser.",
+    "key": "API-licensnyckel",
+    "check": "Kontrollera nyckel",
+    "connected": "Ansluten",
+    "remove": "Ta bort nyckel",
+    "connect": "Anslut",
+    "invalid": "Kontrollera licensen:",
+    "required": "Lägg till minst en giltig API-licens."
+  },
+  "no": {
+    "title": "Koble til jsonscraper",
+    "intro": "Legg til en API-lisens for Instagram eller TikTok, eller begge. Hvert produkt beholder eget abonnement og egne grenser.",
+    "key": "API-lisensnøkkel",
+    "check": "Kontroller nøkkel",
+    "connected": "Tilkoblet",
+    "remove": "Fjern nøkkel",
+    "connect": "Koble til",
+    "invalid": "Kontroller lisensen:",
+    "required": "Legg til minst én gyldig API-lisens."
+  },
+  "fi": {
+    "title": "Yhdistä jsonscraper",
+    "intro": "Lisää Instagram- tai TikTok-API-lisenssi tai molemmat. Kummallakin tuotteella on oma tilaus ja omat rajat.",
+    "key": "API-lisenssiavain",
+    "check": "Tarkista avain",
+    "connected": "Yhdistetty",
+    "remove": "Poista avain",
+    "connect": "Yhdistä",
+    "invalid": "Tarkista lisenssi:",
+    "required": "Lisää vähintään yksi voimassa oleva API-lisenssi."
+  },
+  "pl": {
+    "title": "Połącz jsonscraper",
+    "intro": "Dodaj licencję API Instagram lub TikTok albo obie. Każdy produkt zachowuje swój plan i limity.",
+    "key": "Klucz licencji API",
+    "check": "Sprawdź klucz",
+    "connected": "Połączono",
+    "remove": "Usuń klucz",
+    "connect": "Połącz",
+    "invalid": "Sprawdź licencję:",
+    "required": "Dodaj co najmniej jedną ważną licencję API."
+  },
+  "cs": {
+    "title": "Připojit jsonscraper",
+    "intro": "Přidejte licenci API Instagram nebo TikTok, případně obě. Každý produkt má vlastní tarif a limity.",
+    "key": "Licenční klíč API",
+    "check": "Ověřit klíč",
+    "connected": "Připojeno",
+    "remove": "Odebrat klíč",
+    "connect": "Připojit",
+    "invalid": "Ověřte licenci:",
+    "required": "Přidejte alespoň jednu platnou licenci API."
+  },
+  "tr": {
+    "title": "jsonscraper bağlantısı",
+    "intro": "Instagram veya TikTok API lisansı ya da her ikisini ekleyin. Her ürünün kendi planı ve istek sınırları geçerlidir.",
+    "key": "API lisans anahtarı",
+    "check": "Anahtarı doğrula",
+    "connected": "Bağlandı",
+    "remove": "Anahtarı kaldır",
+    "connect": "Bağlan",
+    "invalid": "Lisansı kontrol edin:",
+    "required": "En az bir geçerli API lisansı ekleyin."
+  },
+  "ja": {
+    "title": "jsonscraper に接続",
+    "intro": "Instagram または TikTok API のライセンス、または両方を追加します。各製品のプランとリクエスト上限が適用されます。",
+    "key": "API ライセンスキー",
+    "check": "キーを確認",
+    "connected": "接続済み",
+    "remove": "キーを削除",
+    "connect": "接続",
+    "invalid": "ライセンスを確認してください：",
+    "required": "有効な API ライセンスを1つ以上追加してください。"
+  },
+  "ko": {
+    "title": "jsonscraper 연결",
+    "intro": "Instagram 또는 TikTok API 라이선스 중 하나 또는 둘 다 추가하세요. 각 제품의 요금제와 요청 한도가 적용됩니다.",
+    "key": "API 라이선스 키",
+    "check": "키 확인",
+    "connected": "연결됨",
+    "remove": "키 삭제",
+    "connect": "연결",
+    "invalid": "라이선스를 확인하세요:",
+    "required": "유효한 API 라이선스를 하나 이상 추가하세요."
+  },
+  "zh": {
+    "title": "连接 jsonscraper",
+    "intro": "添加 Instagram 或 TikTok API 许可证，也可同时添加两者。各产品保留独立套餐和请求限额。",
+    "key": "API 许可证密钥",
+    "check": "验证密钥",
+    "connected": "已连接",
+    "remove": "移除密钥",
+    "connect": "连接",
+    "invalid": "请检查许可证：",
+    "required": "请至少添加一个有效的 API 许可证。"
+  },
+  "ar": {
+    "title": "ربط jsonscraper",
+    "intro": "أضف ترخيص Instagram أو TikTok API أو كليهما. يحتفظ كل منتج بخطته وحدود طلباته الخاصة.",
+    "key": "مفتاح ترخيص API",
+    "check": "التحقق من المفتاح",
+    "connected": "متصل",
+    "remove": "إزالة المفتاح",
+    "connect": "ربط",
+    "invalid": "تحقق من الترخيص:",
+    "required": "أضف ترخيص API صالحًا واحدًا على الأقل."
+  },
+  "he": {
+    "title": "חיבור jsonscraper",
+    "intro": "אפשר להוסיף רישיון Instagram או TikTok API, או את שניהם. לכל מוצר נשמרים המסלול ומגבלות הבקשות שלו.",
+    "key": "מפתח רישיון API",
+    "check": "בדיקת מפתח",
+    "connected": "מחובר",
+    "remove": "הסרת מפתח",
+    "connect": "חיבור",
+    "invalid": "יש לבדוק את הרישיון:",
+    "required": "יש להוסיף לפחות רישיון API תקף אחד."
+  }
+}

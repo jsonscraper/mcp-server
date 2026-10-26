@@ -1,0 +1,2215 @@
+[
+  {
+    "product": "instagram",
+    "name": "v1_user_by_id",
+    "path": "/v1/user/by/id",
+    "method": "GET",
+    "description": "Get user info by ID",
+    "parameters": [
+      {
+        "name": "id",
+        "optional": false,
+        "description": ""
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v1_user_by_username",
+    "path": "/v1/user/by/username",
+    "method": "GET",
+    "description": "Get user info by username (by ID is faster)",
+    "parameters": [
+      {
+        "name": "username",
+        "optional": false,
+        "description": ""
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v1_user_by_url",
+    "path": "/v1/user/by/url",
+    "method": "GET",
+    "description": "Get user info by URL (by ID is faster)",
+    "parameters": [
+      {
+        "name": "url",
+        "optional": false,
+        "description": ""
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v1_user_about",
+    "path": "/v1/user/about",
+    "method": "GET",
+    "description": "Get info about user by ID",
+    "parameters": [
+      {
+        "name": "id",
+        "optional": false,
+        "description": ""
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v1_user_medias_chunk",
+    "path": "/v1/user/medias/chunk",
+    "method": "GET",
+    "description": "Get posts (chunked)",
+    "parameters": [
+      {
+        "name": "user_id",
+        "optional": false,
+        "description": ""
+      },
+      {
+        "name": "end_cursor",
+        "optional": true,
+        "description": "String value. It is used for scrolling through the feed and load next media chunk. You can obtain this value from the response to the previous request."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v1_user_medias_pinned",
+    "path": "/v1/user/medias/pinned",
+    "method": "GET",
+    "description": "Get pinned posts",
+    "parameters": [
+      {
+        "name": "user_id",
+        "optional": false,
+        "description": ""
+      },
+      {
+        "name": "amount",
+        "optional": true,
+        "description": "The number of publications you want to receive in response."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v1_user_clips_chunk",
+    "path": "/v1/user/clips/chunk",
+    "method": "GET",
+    "description": "Get reels (chunked)",
+    "parameters": [
+      {
+        "name": "user_id",
+        "optional": false,
+        "description": ""
+      },
+      {
+        "name": "end_cursor",
+        "optional": true,
+        "description": "String value. It is used for scrolling through the feed and load next media chunk. You can obtain this value from the response to the previous request."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v1_user_tag_medias_chunk",
+    "path": "/v1/user/tag/medias/chunk",
+    "method": "GET",
+    "description": "Get tagged (mentions) posts",
+    "parameters": [
+      {
+        "name": "user_id",
+        "optional": false,
+        "description": ""
+      },
+      {
+        "name": "max_id",
+        "optional": true,
+        "description": "String value. It is used for scrolling through the feed and load next media chunk."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v1_user_stories",
+    "path": "/v1/user/stories",
+    "method": "GET",
+    "description": "Get user stories by ID",
+    "parameters": [
+      {
+        "name": "user_id",
+        "optional": false,
+        "description": ""
+      },
+      {
+        "name": "amount",
+        "optional": true,
+        "description": "The number of stories you want to receive in response."
+      },
+      {
+        "name": "force",
+        "optional": true,
+        "description": "Skip account privacy check"
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v1_user_stories_by_username",
+    "path": "/v1/user/stories/by/username",
+    "method": "GET",
+    "description": "Get user stories by username (by ID is faster)",
+    "parameters": [
+      {
+        "name": "username",
+        "optional": false,
+        "description": ""
+      },
+      {
+        "name": "amount",
+        "optional": true,
+        "description": "The number of stories you want to receive in response."
+      },
+      {
+        "name": "force",
+        "optional": true,
+        "description": "Skip account privacy check"
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v1_user_highlights",
+    "path": "/v1/user/highlights",
+    "method": "GET",
+    "description": "Get user highlights by ID",
+    "parameters": [
+      {
+        "name": "user_id",
+        "optional": false,
+        "description": ""
+      },
+      {
+        "name": "amount",
+        "optional": true,
+        "description": "The number of stories you want to receive in response."
+      },
+      {
+        "name": "force",
+        "optional": true,
+        "description": "Skip account privacy check"
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v1_user_highlights_by_username",
+    "path": "/v1/user/highlights/by/username",
+    "method": "GET",
+    "description": "Get user highlights by username (by ID is faster)",
+    "parameters": [
+      {
+        "name": "username",
+        "optional": false,
+        "description": ""
+      },
+      {
+        "name": "amount",
+        "optional": true,
+        "description": "The number of stories you want to receive in response."
+      },
+      {
+        "name": "force",
+        "optional": true,
+        "description": "Skip account privacy check"
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v1_user_search_followers",
+    "path": "/v1/user/search/followers",
+    "method": "GET",
+    "description": "Search in followers list by query (not working for legacy verified accounts)",
+    "parameters": [
+      {
+        "name": "user_id",
+        "optional": false,
+        "description": "Instagram ID of the user whose followers you want to check."
+      },
+      {
+        "name": "query",
+        "optional": false,
+        "description": "The keyword or nickname of the profile you want to find."
+      },
+      {
+        "name": "force",
+        "optional": true,
+        "description": "Skip account privacy check."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v1_user_search_following",
+    "path": "/v1/user/search/following",
+    "method": "GET",
+    "description": "Search in followings list by query (not working for legacy verified accounts)",
+    "parameters": [
+      {
+        "name": "user_id",
+        "optional": false,
+        "description": "Instagram ID of the user whose following you want to check."
+      },
+      {
+        "name": "query",
+        "optional": false,
+        "description": "The keyword or nickname of the profile you want to find."
+      },
+      {
+        "name": "force",
+        "optional": true,
+        "description": "Skip account privacy check."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v1_user_following_chunk",
+    "path": "/v1/user/following/chunk",
+    "method": "GET",
+    "description": "Get user following (chunked)",
+    "parameters": [
+      {
+        "name": "user_id",
+        "optional": false,
+        "description": "Instagram ID of the user whose following list you want to retrieve."
+      },
+      {
+        "name": "max_id",
+        "optional": true,
+        "description": "Pagination cursor. Use the max_id value from the previous response to load the next chunk of results."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v1_user_followers_chunk",
+    "path": "/v1/user/followers/chunk",
+    "method": "GET",
+    "description": "Get user followers (chunked)",
+    "parameters": [
+      {
+        "name": "user_id",
+        "optional": false,
+        "description": "Instagram ID of the user whose followers list you want to retrieve."
+      },
+      {
+        "name": "max_id",
+        "optional": true,
+        "description": "Pagination cursor. Use the max_id value from the previous response to load the next chunk of results."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v1_media_by_id",
+    "path": "/v1/media/by/id",
+    "method": "GET",
+    "description": "Get media info by ID",
+    "parameters": [
+      {
+        "name": "id",
+        "optional": false,
+        "description": "Unique ID of the media item."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v1_media_by_code",
+    "path": "/v1/media/by/code",
+    "method": "GET",
+    "description": "Get media info by shortcode",
+    "parameters": [
+      {
+        "name": "code",
+        "optional": false,
+        "description": "Unique ID of the media item."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v1_media_by_url",
+    "path": "/v1/media/by/url",
+    "method": "GET",
+    "description": "Get media info by URL",
+    "parameters": [
+      {
+        "name": "url",
+        "optional": false,
+        "description": "Unique ID of the media item."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v1_media_insight",
+    "path": "/v1/media/insight",
+    "method": "GET",
+    "description": "Get media insights",
+    "parameters": [
+      {
+        "name": "media_id",
+        "optional": false,
+        "description": "Unique ID of the media item."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v1_media_comments_chunk",
+    "path": "/v1/media/comments/chunk",
+    "method": "GET",
+    "description": "Get media comments (chunked)",
+    "parameters": [
+      {
+        "name": "id",
+        "optional": false,
+        "description": "Unique ID of the media item."
+      },
+      {
+        "name": "min_id",
+        "optional": true,
+        "description": "Pagination cursor (load older comments depending on IG behavior)."
+      },
+      {
+        "name": "max_id",
+        "optional": true,
+        "description": "Pagination cursor (load newer comments depending on IG behavior)."
+      },
+      {
+        "name": "can_support_threading",
+        "optional": true,
+        "description": "Enables threaded replies support when available."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v1_media_likers",
+    "path": "/v1/media/likers",
+    "method": "GET",
+    "description": "Get media likers",
+    "parameters": [
+      {
+        "name": "id",
+        "optional": false,
+        "description": "Unique ID of the media item."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v1_media_user",
+    "path": "/v1/media/user",
+    "method": "GET",
+    "description": "Get author of the media",
+    "parameters": [
+      {
+        "name": "media_id",
+        "optional": false,
+        "description": "Unique ID of the media item."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v1_media_oembed",
+    "path": "/v1/media/oembed",
+    "method": "GET",
+    "description": "Get media oEmbed data",
+    "parameters": [
+      {
+        "name": "url",
+        "optional": false,
+        "description": "Full public Instagram media URL."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v1_media_code_from_pk",
+    "path": "/v1/media/code/from/pk",
+    "method": "GET",
+    "description": "Get media code from media ID (PK) (unlimited usage)",
+    "parameters": [
+      {
+        "name": "pk",
+        "optional": false,
+        "description": "Unique ID of the media item."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v1_media_pk_from_code",
+    "path": "/v1/media/pk/from/code",
+    "method": "GET",
+    "description": "Get media ID (PK) from shortcode (unlimited usage)",
+    "parameters": [
+      {
+        "name": "code",
+        "optional": false,
+        "description": "Media shortcode."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v1_media_pk_from_url",
+    "path": "/v1/media/pk/from/url",
+    "method": "GET",
+    "description": "Get media ID (PK) from URL (unlimited usage)",
+    "parameters": [
+      {
+        "name": "url",
+        "optional": false,
+        "description": "Full public Instagram media URL."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v1_story_by_id",
+    "path": "/v1/story/by/id",
+    "method": "GET",
+    "description": "Get story by ID",
+    "parameters": [
+      {
+        "name": "id",
+        "optional": false,
+        "description": "Story ID"
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v1_story_by_url",
+    "path": "/v1/story/by/url",
+    "method": "GET",
+    "description": "Get story by URL",
+    "parameters": [
+      {
+        "name": "url",
+        "optional": false,
+        "description": "Full public story URL."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v1_story_download",
+    "path": "/v1/story/download",
+    "method": "GET",
+    "description": "Download story by ID",
+    "parameters": [
+      {
+        "name": "id",
+        "optional": false,
+        "description": "Story ID."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v1_story_download_by_url",
+    "path": "/v1/story/download/by/url",
+    "method": "GET",
+    "description": "Download story by direct media URL (unlimited usage)",
+    "parameters": [
+      {
+        "name": "url",
+        "optional": false,
+        "description": "Direct media file URL (CDN link)."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v1_story_download_by_story_url",
+    "path": "/v1/story/download/by/story/url",
+    "method": "GET",
+    "description": "Download story file by story URL (IG story link)",
+    "parameters": [
+      {
+        "name": "url",
+        "optional": false,
+        "description": "Public IG story URL."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v1_highlight_by_id",
+    "path": "/v1/highlight/by/id",
+    "method": "GET",
+    "description": "Get highlight by ID",
+    "parameters": [
+      {
+        "name": "id",
+        "optional": false,
+        "description": "Highlight ID."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v1_highlight_by_url",
+    "path": "/v1/highlight/by/url",
+    "method": "GET",
+    "description": "Get highlight by URL",
+    "parameters": [
+      {
+        "name": "url",
+        "optional": false,
+        "description": "Full highlight URL."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v1_location_by_id",
+    "path": "/v1/location/by/id",
+    "method": "GET",
+    "description": "Get location by ID",
+    "parameters": [
+      {
+        "name": "id",
+        "optional": false,
+        "description": "Location ID."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v1_location_medias_top",
+    "path": "/v1/location/medias/top",
+    "method": "GET",
+    "description": "Get location top medias",
+    "parameters": [
+      {
+        "name": "location_pk",
+        "optional": false,
+        "description": "Location ID (PK)"
+      },
+      {
+        "name": "amount",
+        "optional": true,
+        "description": "Number of items to return."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v1_location_medias_recent",
+    "path": "/v1/location/medias/recent",
+    "method": "GET",
+    "description": "Get location recent medias",
+    "parameters": [
+      {
+        "name": "location_pk",
+        "optional": false,
+        "description": "Location ID (PK)"
+      },
+      {
+        "name": "amount",
+        "optional": true,
+        "description": "Number of items to return."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v1_location_medias_top_chunk",
+    "path": "/v1/location/medias/top/chunk",
+    "method": "GET",
+    "description": "Get location top medias (chunked)",
+    "parameters": [
+      {
+        "name": "location_pk",
+        "optional": false,
+        "description": "Location ID (PK)"
+      },
+      {
+        "name": "max_id",
+        "optional": true,
+        "description": "String value. It is used for scrolling through the feed and load next media chunk. You can obtain this value from the response to the previous request."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v1_location_medias_recent_chunk",
+    "path": "/v1/location/medias/recent/chunk",
+    "method": "GET",
+    "description": "Get location recent medias (chunked)",
+    "parameters": [
+      {
+        "name": "location_pk",
+        "optional": false,
+        "description": "Location ID (PK)"
+      },
+      {
+        "name": "max_id",
+        "optional": true,
+        "description": "String value. It is used for scrolling through the feed and load next media chunk. You can obtain this value from the response to the previous request."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v1_location_search",
+    "path": "/v1/location/search",
+    "method": "GET",
+    "description": "Search locations",
+    "parameters": [
+      {
+        "name": "lat",
+        "optional": false,
+        "description": "Latitude"
+      },
+      {
+        "name": "lng",
+        "optional": false,
+        "description": "Longitude"
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v1_hashtag_by_name",
+    "path": "/v1/hashtag/by/name",
+    "method": "GET",
+    "description": "Get hashtag by name",
+    "parameters": [
+      {
+        "name": "name",
+        "optional": false,
+        "description": "Hashtag name (without # and special symbols)."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v1_hashtag_medias_top",
+    "path": "/v1/hashtag/medias/top",
+    "method": "GET",
+    "description": "Get hashtag top medias",
+    "parameters": [
+      {
+        "name": "name",
+        "optional": false,
+        "description": "Hashtag name (without # and special symbols)."
+      },
+      {
+        "name": "amount",
+        "optional": true,
+        "description": "Number of items to return."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v1_hashtag_medias_top_chunk",
+    "path": "/v1/hashtag/medias/top/chunk",
+    "method": "GET",
+    "description": "Get hashtag top medias (chunked)",
+    "parameters": [
+      {
+        "name": "name",
+        "optional": false,
+        "description": "Hashtag name (without # and special symbols)."
+      },
+      {
+        "name": "max_id",
+        "optional": true,
+        "description": "Pagination cursor for the next chunk. You can obtain this value from the response to the previous request."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v1_hashtag_medias_top_recent_chunk",
+    "path": "/v1/hashtag/medias/top/recent/chunk",
+    "method": "GET",
+    "description": "Get hashtag recent medias (chunked)",
+    "parameters": [
+      {
+        "name": "name",
+        "optional": false,
+        "description": "Hashtag name (without # and special symbols)."
+      },
+      {
+        "name": "max_id",
+        "optional": true,
+        "description": "Pagination cursor for the next chunk. You can obtain this value from the response to the previous request."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v1_hashtag_medias_clips_chunk",
+    "path": "/v1/hashtag/medias/clips/chunk",
+    "method": "GET",
+    "description": "Get hashtag clips (chunked)",
+    "parameters": [
+      {
+        "name": "name",
+        "optional": false,
+        "description": "Hashtag name (without # and special symbols)."
+      },
+      {
+        "name": "max_id",
+        "optional": true,
+        "description": "Pagination cursor for the next chunk. You can obtain this value from the response to the previous request."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v1_search_hashtags",
+    "path": "/v1/search/hashtags",
+    "method": "GET",
+    "description": "Search hashtags",
+    "parameters": [
+      {
+        "name": "query",
+        "optional": false,
+        "description": "Search query text."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v1_search_users",
+    "path": "/v1/search/users",
+    "method": "GET",
+    "description": "Search users",
+    "parameters": [
+      {
+        "name": "query",
+        "optional": false,
+        "description": "Search query text."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v1_search_music",
+    "path": "/v1/search/music",
+    "method": "GET",
+    "description": "Search music",
+    "parameters": [
+      {
+        "name": "query",
+        "optional": false,
+        "description": "Search query text."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v1_fbsearch_places",
+    "path": "/v1/fbsearch/places",
+    "method": "GET",
+    "description": "Search places",
+    "parameters": [
+      {
+        "name": "query",
+        "optional": false,
+        "description": "Search query text."
+      },
+      {
+        "name": "lat",
+        "optional": true,
+        "description": "Latitude."
+      },
+      {
+        "name": "lng",
+        "optional": true,
+        "description": "Longitude."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v1_fbsearch_topsearch",
+    "path": "/v1/fbsearch/topsearch",
+    "method": "GET",
+    "description": "Top search",
+    "parameters": [
+      {
+        "name": "query",
+        "optional": false,
+        "description": "Search query text."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v2_user_by_id",
+    "path": "/v2/user/by/id",
+    "method": "GET",
+    "description": "Get user info by ID",
+    "parameters": [
+      {
+        "name": "id",
+        "optional": false,
+        "description": "Numeric Instagram user ID."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v2_user_by_username",
+    "path": "/v2/user/by/username",
+    "method": "GET",
+    "description": "Get user info by username",
+    "parameters": [
+      {
+        "name": "username",
+        "optional": false,
+        "description": "Instagram username (without @)."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v2_userstream_by_id",
+    "path": "/v2/userstream/by/id",
+    "method": "GET",
+    "description": "Get user info stream by ID",
+    "parameters": [
+      {
+        "name": "id",
+        "optional": false,
+        "description": "Numeric Instagram user ID."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v2_userstream_by_username",
+    "path": "/v2/userstream/by/username",
+    "method": "GET",
+    "description": "Get user info stream by username",
+    "parameters": [
+      {
+        "name": "username",
+        "optional": false,
+        "description": "Instagram username (without @)."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v2_user_stories",
+    "path": "/v2/user/stories",
+    "method": "GET",
+    "description": "Get user stories by ID",
+    "parameters": [
+      {
+        "name": "user_id",
+        "optional": false,
+        "description": "Numeric Instagram user ID."
+      },
+      {
+        "name": "force",
+        "optional": true,
+        "description": "Skip account privacy checks."
+      },
+      {
+        "name": "safe_int",
+        "optional": true,
+        "description": "Convert large integers to strings."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v2_user_stories_by_username",
+    "path": "/v2/user/stories/by/username",
+    "method": "GET",
+    "description": "Get user stories by username",
+    "parameters": [
+      {
+        "name": "username",
+        "optional": false,
+        "description": "Instagram username (without @)."
+      },
+      {
+        "name": "force",
+        "optional": true,
+        "description": "Skip account privacy checks."
+      },
+      {
+        "name": "safe_int",
+        "optional": true,
+        "description": "Convert large integers to strings."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v2_user_clips",
+    "path": "/v2/user/clips",
+    "method": "GET",
+    "description": "Get user reels by ID",
+    "parameters": [
+      {
+        "name": "user_id",
+        "optional": false,
+        "description": "Numeric Instagram user ID."
+      },
+      {
+        "name": "page_id",
+        "optional": true,
+        "description": "Pagination cursor (use next_page_id from previous response)."
+      },
+      {
+        "name": "safe_int",
+        "optional": true,
+        "description": "Convert large integers to strings."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v2_user_following",
+    "path": "/v2/user/following",
+    "method": "GET",
+    "description": "Get user following list",
+    "parameters": [
+      {
+        "name": "user_id",
+        "optional": false,
+        "description": "Numeric Instagram user ID."
+      },
+      {
+        "name": "page_id",
+        "optional": true,
+        "description": "Pagination cursor (use next_page_id from previous response)."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v2_user_followers",
+    "path": "/v2/user/followers",
+    "method": "GET",
+    "description": "Get user followers list",
+    "parameters": [
+      {
+        "name": "user_id",
+        "optional": false,
+        "description": "Numeric Instagram user ID."
+      },
+      {
+        "name": "page_id",
+        "optional": true,
+        "description": "Pagination cursor (use next_page_id from previous response)."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v2_user_tag_medias",
+    "path": "/v2/user/tag/medias",
+    "method": "GET",
+    "description": "Get media where user is tagged",
+    "parameters": [
+      {
+        "name": "user_id",
+        "optional": false,
+        "description": "Numeric Instagram user ID."
+      },
+      {
+        "name": "page_id",
+        "optional": true,
+        "description": "Pagination cursor (use next_page_id from previous response)."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v2_user_highlights",
+    "path": "/v2/user/highlights",
+    "method": "GET",
+    "description": "Get user highlights by ID",
+    "parameters": [
+      {
+        "name": "user_id",
+        "optional": false,
+        "description": "Numeric Instagram user ID."
+      },
+      {
+        "name": "amount",
+        "optional": true,
+        "description": "The number of stories you want to receive in response."
+      },
+      {
+        "name": "force",
+        "optional": true,
+        "description": "Skip account privacy check"
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v2_user_highlights_by_username",
+    "path": "/v2/user/highlights/by/username",
+    "method": "GET",
+    "description": "Get user highlights by username (by ID is faster)",
+    "parameters": [
+      {
+        "name": "username",
+        "optional": false,
+        "description": ""
+      },
+      {
+        "name": "amount",
+        "optional": true,
+        "description": "The number of stories you want to receive in response."
+      },
+      {
+        "name": "force",
+        "optional": true,
+        "description": "Skip account privacy check"
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v2_user_explore_businesses_by_id",
+    "path": "/v2/user/explore/businesses/by/id",
+    "method": "GET",
+    "description": "Get business suggestions for user",
+    "parameters": [
+      {
+        "name": "user_id",
+        "optional": false,
+        "description": "Numeric Instagram user ID."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v2_user_suggested_profiles",
+    "path": "/v2/user/suggested/profiles",
+    "method": "GET",
+    "description": "Get suggested profiles for user",
+    "parameters": [
+      {
+        "name": "user_id",
+        "optional": false,
+        "description": "Numeric Instagram user ID."
+      },
+      {
+        "name": "expand_suggestion",
+        "optional": true,
+        "description": "Expand suggestion object with more details."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v2_media_info_by_id",
+    "path": "/v2/media/info/by/id",
+    "method": "GET",
+    "description": "Get media info by ID",
+    "parameters": [
+      {
+        "name": "id",
+        "optional": false,
+        "description": "Unique ID of the media item."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v2_media_info_by_code",
+    "path": "/v2/media/info/by/code",
+    "method": "GET",
+    "description": "Get media info by shortcode",
+    "parameters": [
+      {
+        "name": "code",
+        "optional": false,
+        "description": "Unique ID of the media item."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v2_media_info_by_url",
+    "path": "/v2/media/info/by/url",
+    "method": "GET",
+    "description": "Get media info by URL",
+    "parameters": [
+      {
+        "name": "url",
+        "optional": false,
+        "description": "Unique ID of the media item."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v2_media_comments",
+    "path": "/v2/media/comments",
+    "method": "GET",
+    "description": "Get media comments",
+    "parameters": [
+      {
+        "name": "id",
+        "optional": false,
+        "description": "Unique ID of the media item."
+      },
+      {
+        "name": "page_id",
+        "optional": true,
+        "description": "Pagination cursor (use next_page_id from previous response)."
+      },
+      {
+        "name": "can_support_threading",
+        "optional": true,
+        "description": "Enables threaded replies support when available."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v2_media_likers",
+    "path": "/v2/media/likers",
+    "method": "GET",
+    "description": "Get media likers",
+    "parameters": [
+      {
+        "name": "id",
+        "optional": false,
+        "description": "Unique ID of the media item."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v2_media_comment_offensive",
+    "path": "/v2/media/comment/offensive",
+    "method": "GET",
+    "description": "Check comment for offensiveness",
+    "parameters": [
+      {
+        "name": "media_id",
+        "optional": false,
+        "description": "Unique ID of the media item."
+      },
+      {
+        "name": "comment",
+        "optional": false,
+        "description": "Comment text to evaluate."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v2_media_comments_replies",
+    "path": "/v2/media/comments/replies",
+    "method": "GET",
+    "description": "Get comment replies",
+    "parameters": [
+      {
+        "name": "media_id",
+        "optional": false,
+        "description": "Unique ID of the media item."
+      },
+      {
+        "name": "comment_id",
+        "optional": false,
+        "description": "Comment ID to load replies for."
+      },
+      {
+        "name": "min_id",
+        "optional": true,
+        "description": "Pagination cursor. Use next_min_id from the previous response."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v2_story_by_id",
+    "path": "/v2/story/by/id",
+    "method": "GET",
+    "description": "Get story by ID",
+    "parameters": [
+      {
+        "name": "id",
+        "optional": false,
+        "description": "Story ID"
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v2_track_by_canonical_id",
+    "path": "/v2/track/by/canonical/id",
+    "method": "GET",
+    "description": "Get music feed by canonical ID",
+    "parameters": [
+      {
+        "name": "canonical_id",
+        "optional": false,
+        "description": "Canonical music ID."
+      },
+      {
+        "name": "page_id",
+        "optional": true,
+        "description": "Pagination cursor (next_page_id from previous response)."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v2_track_by_id",
+    "path": "/v2/track/by/id",
+    "method": "GET",
+    "description": "Get music feed by ID",
+    "parameters": [
+      {
+        "name": "track_id",
+        "optional": false,
+        "description": "Instagram track ID."
+      },
+      {
+        "name": "page_id",
+        "optional": true,
+        "description": "Pagination cursor (next_page_id from previous response)."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v2_hashtag_by_name",
+    "path": "/v2/hashtag/by/name",
+    "method": "GET",
+    "description": "Get hashtag by name",
+    "parameters": [
+      {
+        "name": "name",
+        "optional": false,
+        "description": "Hashtag name (without # and special symbols)."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v2_hashtag_medias_top",
+    "path": "/v2/hashtag/medias/top",
+    "method": "GET",
+    "description": "Get hashtag top medias",
+    "parameters": [
+      {
+        "name": "name",
+        "optional": false,
+        "description": "Hashtag name (without # and special symbols)."
+      },
+      {
+        "name": "page_id",
+        "optional": true,
+        "description": "Pagination cursor (next_page_id from previous response)"
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v2_hashtag_medias_recent",
+    "path": "/v2/hashtag/medias/recent",
+    "method": "GET",
+    "description": "Get hashtag recent medias",
+    "parameters": [
+      {
+        "name": "name",
+        "optional": false,
+        "description": "Hashtag name (without # and special symbols)."
+      },
+      {
+        "name": "page_id",
+        "optional": true,
+        "description": "Pagination cursor (next_page_id from previous response)"
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v2_highlight_by_id",
+    "path": "/v2/highlight/by/id",
+    "method": "GET",
+    "description": "Get highlight by ID",
+    "parameters": [
+      {
+        "name": "id",
+        "optional": false,
+        "description": "Highlight ID."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v2_search_hashtags",
+    "path": "/v2/search/hashtags",
+    "method": "GET",
+    "description": "Search hashtags",
+    "parameters": [
+      {
+        "name": "query",
+        "optional": false,
+        "description": "Search query text."
+      },
+      {
+        "name": "page_token",
+        "optional": true,
+        "description": "Pagination token. Use the next_page_token from the previous response."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v2_search_music",
+    "path": "/v2/search/music",
+    "method": "GET",
+    "description": "Search music",
+    "parameters": [
+      {
+        "name": "query",
+        "optional": false,
+        "description": "Search query text."
+      },
+      {
+        "name": "next_max_id",
+        "optional": true,
+        "description": "Cursor for the next page. Use the next_max_id value from the previous response."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v2_fbsearch_accounts",
+    "path": "/v2/fbsearch/accounts",
+    "method": "GET",
+    "description": "Search accounts (users)",
+    "parameters": [
+      {
+        "name": "query",
+        "optional": false,
+        "description": "Search query text."
+      },
+      {
+        "name": "page_token",
+        "optional": true,
+        "description": "Pagination token from the previous response."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v2_fbsearch_places",
+    "path": "/v2/fbsearch/places",
+    "method": "GET",
+    "description": "Search places (locations)",
+    "parameters": [
+      {
+        "name": "query",
+        "optional": false,
+        "description": "Search keyword (username or name)."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v2_fbsearch_topsearch",
+    "path": "/v2/fbsearch/topsearch",
+    "method": "GET",
+    "description": "Top search",
+    "parameters": [
+      {
+        "name": "query",
+        "optional": false,
+        "description": "Search query text."
+      },
+      {
+        "name": "next_max_id",
+        "optional": true,
+        "description": "Use the next_max_id value from the previous response."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v2_fbsearch_reels",
+    "path": "/v2/fbsearch/reels",
+    "method": "GET",
+    "description": "Search reels (clips)",
+    "parameters": [
+      {
+        "name": "query",
+        "optional": false,
+        "description": "Search keyword."
+      },
+      {
+        "name": "reels_max_id",
+        "optional": true,
+        "description": "Cursor for the next page. Use the reels_max_id value from the previous response."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "gql_comments_chunk",
+    "path": "/gql/comments/chunk",
+    "method": "GET",
+    "description": "Get comments list by media ID (chunked)",
+    "parameters": [
+      {
+        "name": "media_id",
+        "optional": false,
+        "description": "IG media ID."
+      },
+      {
+        "name": "sort_order",
+        "optional": true,
+        "description": "Sorting mode. Allowed: recent, popular"
+      },
+      {
+        "name": "end_cursor",
+        "optional": true,
+        "description": "Cursor for the next page. Use the end_cursor value from the previous response."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "gql_comments_threaded_chunk",
+    "path": "/gql/comments/threaded/chunk",
+    "method": "GET",
+    "description": "Get threaded replies list by comment ID (chunked)",
+    "parameters": [
+      {
+        "name": "media_id",
+        "optional": false,
+        "description": "IG media ID."
+      },
+      {
+        "name": "comment_id",
+        "optional": false,
+        "description": "Parent comment ID to load replies for."
+      },
+      {
+        "name": "end_cursor",
+        "optional": true,
+        "description": "Cursor for the next page. Use the end_cursor value from the previous response."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "gql_comment_likers_chunk",
+    "path": "/gql/comment/likers/chunk",
+    "method": "GET",
+    "description": "Get comment likers list by comment ID (chunked)",
+    "parameters": [
+      {
+        "name": "comment_id",
+        "optional": false,
+        "description": "Comment ID."
+      },
+      {
+        "name": "end_cursor",
+        "optional": true,
+        "description": "Cursor for the next page. Use the end_cursor value from the previous response."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "gql_topsearch",
+    "path": "/gql/topsearch",
+    "method": "GET",
+    "description": "Search top content by keyword",
+    "parameters": [
+      {
+        "name": "query",
+        "optional": false,
+        "description": "Search keyword/query."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "gql_media_likers",
+    "path": "/gql/media/likers",
+    "method": "GET",
+    "description": "Get media likers by media ID",
+    "parameters": [
+      {
+        "name": "media_id",
+        "optional": false,
+        "description": "IG media ID."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "gql_media_usertags",
+    "path": "/gql/media/usertags",
+    "method": "GET",
+    "description": "Get video usertags by media IDs",
+    "parameters": [
+      {
+        "name": "media_ids",
+        "optional": false,
+        "description": "One or multiple comma-separated media IDs (up to 10)."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "gql_user_followers_chunk",
+    "path": "/gql/user/followers/chunk",
+    "method": "GET",
+    "description": "Get user followers (chunked)",
+    "parameters": [
+      {
+        "name": "user_id",
+        "optional": false,
+        "description": "Target user ID."
+      },
+      {
+        "name": "force",
+        "optional": true,
+        "description": "Skip account privacy validation check (if applicable in your implementation)."
+      },
+      {
+        "name": "end_cursor",
+        "optional": true,
+        "description": "Cursor for the next page. Use the end_cursor value from the previous response."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "gql_user_following_chunk",
+    "path": "/gql/user/following/chunk",
+    "method": "GET",
+    "description": "Get user following (chunked)",
+    "parameters": [
+      {
+        "name": "user_id",
+        "optional": false,
+        "description": "Target user ID."
+      },
+      {
+        "name": "force",
+        "optional": true,
+        "description": "Skip account privacy validation check (if applicable in your implementation)."
+      },
+      {
+        "name": "end_cursor",
+        "optional": true,
+        "description": "Cursor for the next page. Use the end_cursor value from the previous response."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "gql_user_reposts",
+    "path": "/gql/user/reposts",
+    "method": "GET",
+    "description": "Get user reposts",
+    "parameters": [
+      {
+        "name": "user_id",
+        "optional": false,
+        "description": "Target user ID."
+      },
+      {
+        "name": "repost_next_max_id",
+        "optional": true,
+        "description": "Cursor for the next page. Use the repost_next_max_id value from the previous response."
+      },
+      {
+        "name": "flat",
+        "optional": true,
+        "description": "If true, returns results in a flattened list format instead of nested structures."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "gql_user_clips",
+    "path": "/gql/user/clips",
+    "method": "GET",
+    "description": "Get user clips (reels)",
+    "parameters": [
+      {
+        "name": "user_id",
+        "optional": false,
+        "description": "Target user ID."
+      },
+      {
+        "name": "max_id",
+        "optional": true,
+        "description": "Cursor for the next page. Use the max_id value from the previous response."
+      },
+      {
+        "name": "sort_by_views",
+        "optional": true,
+        "description": "If true, clips will be sorted by view count (typically descending)."
+      },
+      {
+        "name": "flat",
+        "optional": true,
+        "description": "If true, returns clips in a flattened list format."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "gql_user_medias",
+    "path": "/gql/user/medias",
+    "method": "GET",
+    "description": "Get user profile media (grid)",
+    "parameters": [
+      {
+        "name": "user_id",
+        "optional": false,
+        "description": "Target user ID."
+      },
+      {
+        "name": "profile_grid_items_cursor",
+        "optional": true,
+        "description": "Cursor for the next page. Use the profile_grid_items_cursor value from the previous response."
+      },
+      {
+        "name": "flat",
+        "optional": true,
+        "description": "If true, returns clips in a flattened list format."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v3_fbsearch_accounts",
+    "path": "/v3/fbsearch/accounts",
+    "method": "GET",
+    "description": "Search users",
+    "parameters": [
+      {
+        "name": "query",
+        "optional": false,
+        "description": "Search keyword (username or name)."
+      },
+      {
+        "name": "page_token",
+        "optional": true,
+        "description": "Pagination token. Use the next_page_token value from the previous response to retrieve the next page."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  },
+  {
+    "product": "instagram",
+    "name": "v3_fbsearch_places",
+    "path": "/v3/fbsearch/places",
+    "method": "GET",
+    "description": "Search places (locations)",
+    "parameters": [
+      {
+        "name": "query",
+        "optional": false,
+        "description": "Search keyword (username or name)."
+      },
+      {
+        "name": "cache_timeout",
+        "optional": true,
+        "description": "Caching is disabled by default. Set a value greater than 0 to enable response caching for the specified number of seconds; repeated requests within this window will be served from cache and will not consume API request quota. Set 0 to keep caching disabled."
+      }
+    ]
+  }
+]

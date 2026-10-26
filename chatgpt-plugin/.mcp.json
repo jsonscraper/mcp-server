@@ -1,0 +1,21 @@
+{
+  "mcpServers": {
+    "jsonscraper": {
+      "url": "https://mcp.jsonscraper.com",
+      "extensions": {
+        "com.openai": {
+          "auth": {
+            "type": "oauth",
+            "client": {
+              "mode": "dcr"
+            },
+            "baseScopes": [
+              "instagram:read",
+              "tiktok:read"
+            ]
+          }
+        }
+      }
+    }
+  }
+}
