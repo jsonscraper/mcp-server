@@ -10,8 +10,8 @@
               "mode": "dcr"
             },
             "baseScopes": [
-              "instagram:read",
-              "tiktok:read"
+              "tiktok:read",
+              "instagram:read"
             ]
           }
         }

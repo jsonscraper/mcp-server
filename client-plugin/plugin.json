@@ -1,6 +1,6 @@
 {
   "name": "jsonscraper",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "description": "Read profiles, posts, comments and available statistics through licensed jsonscraper APIs.",
   "author": {
     "name": "Yuliya Fitinina",
@@ -22,7 +22,7 @@
       "interface": {
         "displayName": "jsonscraper",
         "shortDescription": "Structured social data",
-        "longDescription": "Retrieve Instagram and TikTok profiles, posts, comments, search results and available statistics through jsonscraper APIs. Connect one or both product licenses on the secure authorization page. Each product has its own license, plan and request quota. Tools retrieve data and do not publish posts, send messages or manage accounts. Availability depends on the source and endpoint; do not assume every returned field is available or current. jsonscraper is an independent service, not affiliated with Meta or TikTok.",
+        "longDescription": "Retrieve TikTok and Instagram profiles, posts, comments, search results and available statistics through jsonscraper APIs. Connect one or both product licenses on the secure authorization page. Each product has its own license, plan and request quota. Tools retrieve data and do not publish posts, send messages or manage accounts. Availability depends on the source and endpoint; do not assume every returned field is available or current. jsonscraper is an independent service, not affiliated with Meta or TikTok.",
         "developerName": "Yuliya Fitinina",
         "category": "Developer Tools",
         "capabilities": [
@@ -35,8 +35,8 @@
         "privacyPolicyURL": "https://jsonscraper.com/privacy-policy",
         "termsOfServiceURL": "https://jsonscraper.com/terms-of-service",
         "defaultPrompt": [
-          "Read the Instagram profile apple and summarize the returned statistics. Use one request.",
-          "Read the TikTok profile therock and summarize the returned statistics. Use one request."
+          "Read the TikTok profile therock and summarize the returned statistics. Use one request.",
+          "Read the Instagram profile apple and summarize the returned statistics. Use one request."
         ],
         "brandColor": "#ff5e00",
         "composerIcon": "./assets/icon.png",

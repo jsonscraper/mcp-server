@@ -2,7 +2,7 @@
 
 [![Packagist version](https://img.shields.io/packagist/v/jsonscraper/mcp-server)](https://packagist.org/packages/jsonscraper/mcp-server) [![PHP](https://img.shields.io/badge/PHP-8.1%2B-777bb4)](composer.json) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-One MCP connection for independently licensed Instagram and TikTok APIs. Connect an Instagram API license, a TikTok API license, or both. Each product keeps its own plan and request quota.
+One MCP connection for independently licensed TikTok and Instagram APIs. Connect a TikTok API license, an Instagram API license, or both. Each product keeps its own plan and request quota.
 
 **Hosted server:** `https://mcp.jsonscraper.com` · **Setup:** [jsonscraper.com/mcp](https://jsonscraper.com/mcp)
 
@@ -23,7 +23,7 @@ Add the hosted URL to ChatGPT, Claude, Codex or a Streamable HTTP MCP client. OA
 
 You can also fill both fields and select Connect directly; both licenses are verified independently. An invalid supplied key prevents approval until corrected or cleared. To add or replace licenses later, reconnect and enter the desired license keys. Existing connections keep their original entitlements until reauthorized. Never put API license keys or social passwords into chat, prompts, repository files or tool arguments.
 
-There are **94 Instagram tools** and **54 TikTok tools**. With one license, `tools/list` exposes that product's tools plus the license information tool. With both, it exposes 148 data tools plus one license information tool. Calling a cached tool without the corresponding license returns an authorization error and a linking challenge without contacting the data API.
+There are **54 TikTok tools** and **94 Instagram tools**. With one license, `tools/list` exposes that product's tools plus the license information tool. With both, it exposes 148 data tools plus one license information tool. Calling a cached tool without the corresponding license returns an authorization error and a linking challenge without contacting the data API.
 
 ## Codex
 
@@ -35,7 +35,7 @@ codex mcp login jsonscraper
 ## Install with Composer
 
 ```sh
-composer require jsonscraper/mcp-server:^0.3.4
+composer require jsonscraper/mcp-server:^0.3.5
 ```
 
 Then configure one or both product license environment variables and run `vendor/bin/jsonscraper-mcp`. Hosted OAuth clients need no local Composer installation.
@@ -68,6 +68,10 @@ Endpoint responses may contain profile identifiers, biographies, posts, comments
 
 MCP adds no response-content cache. Underlying API cache duration depends on endpoint settings. Privacy requests require email confirmation and manual ownership review; automatic service-wide suppression and cache removal must not be assumed. Do not claim access to private messages or protected accounts.
 
+## Ready-to-use workflows
+
+The [setup guide](https://jsonscraper.com/mcp#recipes) includes 14 workflows, with separate TikTok and Instagram tabs. Each begins with a profile overview, followed by video discovery, competitors, comments, creator search, content ideas and comparison snapshots. More workflows expand progressively.
+
 ## License status and quota
 
 Ask “Check my connected licenses” to call `jsonscraper_get_license_info`. The optional `product` filter selects Instagram or TikTok; omit it to check all connected licenses. It reports expiration, lifetime status, request limits, usage and remaining requests. Null means unavailable, zero means exhausted only when a finite limit is known. The quota period follows the license entitlement and is not assumed to reset monthly. The hosted installation reads live API counters; self-hosted installations use licensing service counters, which can lag concurrent calls. Demo monthly quotas are reported separately and shared across both products. This check does not consume social-data API quota. Links point to the existing Evelode license account page without exposing keys, customer data or a checkout URL.
@@ -78,6 +82,6 @@ Ask “Check my connected licenses” to call `jsonscraper_get_license_info`. Th
 composer test
 ```
 
-Runtime release: **0.3.4**. ChatGPT/Claude package release: **1.1.3**. The repository includes package sources under `chatgpt-plugin`, `client-plugin` and `claude-plugin`. Reviewer credentials stay in the private administration panel and are never included in public ZIPs. Review requires a walkthrough video and the publisher's verification of applicable third-party authorization.
+Runtime release: **0.3.5**. ChatGPT/Claude package release: **1.1.4**. The repository includes package sources under `chatgpt-plugin`, `client-plugin` and `claude-plugin`. Reviewer credentials stay in the private administration panel and are never included in public ZIPs. Review requires a walkthrough video and the publisher's verification of applicable third-party authorization.
 
-This is the common successor to `instagram-mcp-server` and `tiktok-mcp-server`. Product-specific hosted MCP endpoints have been retired. The Instagram and TikTok API products, licenses and response behavior remain separate.
+This is the common successor to `instagram-mcp-server` and `tiktok-mcp-server`. Product-specific hosted MCP endpoints have been retired. The TikTok and Instagram API products, licenses and response behavior remain separate.

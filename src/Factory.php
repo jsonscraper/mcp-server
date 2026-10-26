@@ -20,7 +20,7 @@ final class Factory {
  }
  public static function protocol(?\Closure $fetch=null):Protocol {
   $fetch??=static fn($product,$path,$args,$key)=>self::fetch($product,$path,$args,$key);$protocols=[];
-  foreach(['instagram'=>'Instagram','tiktok'=>'Tiktok'] as $product=>$label){$class=__NAMESPACE__.'\\Products\\'.$label.'\\Protocol';$protocols[$product]=new $class($product,$label,json_decode(file_get_contents(__DIR__.'/../docs/'.$product.'-endpoints.json'),true,64,JSON_THROW_ON_ERROR),static fn($path,$args,$key)=>$fetch($product,$path,$args,$key));}
+  foreach(['tiktok'=>'Tiktok','instagram'=>'Instagram'] as $product=>$label){$class=__NAMESPACE__.'\\Products\\'.$label.'\\Protocol';$protocols[$product]=new $class($product,$label,json_decode(file_get_contents(__DIR__.'/../docs/'.$product.'-endpoints.json'),true,64,JSON_THROW_ON_ERROR),static fn($path,$args,$key)=>$fetch($product,$path,$args,$key));}
   $infoAdapter=getenv('JSONSCRAPER_MCP_LICENSE_INFO');$reader=$infoAdapter?require $infoAdapter:null;if($reader!==null&&!$reader instanceof \Closure)throw new \RuntimeException('Invalid license info adapter.');return new Protocol($protocols,new LicenseInfo($reader));
  }
  private static function fetch(string $product,string $path,array $args,string $license):array {
