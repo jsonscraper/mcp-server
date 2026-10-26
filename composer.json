@@ -27,13 +27,15 @@
   "homepage": "https://jsonscraper.com/mcp",
   "keywords": [
     "mcp",
-    "mcp-server",
-    "instagram",
-    "instagram-api",
-    "instagram-scraper",
+    "model-context-protocol",
+    "jsonscraper",
     "chatgpt",
+    "claude",
     "codex",
-    "claude"
+    "php",
+    "instagram-api",
+    "tiktok-api",
+    "social-data"
   ],
   "support": {
     "issues": "https://github.com/jsonscraper/mcp-server/issues",

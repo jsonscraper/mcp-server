@@ -1,8 +1,17 @@
 # jsonscraper MCP server
 
+[![Packagist version](https://img.shields.io/packagist/v/jsonscraper/mcp-server)](https://packagist.org/packages/jsonscraper/mcp-server) [![PHP](https://img.shields.io/badge/PHP-8.1%2B-777bb4)](composer.json) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 One MCP connection for independently licensed Instagram and TikTok APIs. Connect an Instagram API license, a TikTok API license, or both. Each product keeps its own plan and request quota.
 
 **Hosted server:** `https://mcp.jsonscraper.com` · **Setup:** [jsonscraper.com/mcp](https://jsonscraper.com/mcp)
+
+<picture>
+  <source media="(max-width: 640px) and (prefers-color-scheme: dark)" srcset="docs/quickstart-mobile-dark.svg">
+  <source media="(max-width: 640px)" srcset="docs/quickstart-mobile.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="docs/quickstart-dark.svg">
+  <img src="docs/quickstart.svg" alt="Connect your assistant, verify one or both product licenses, use enabled tools and read JSON results" width="880">
+</picture>
 
 ## Connect with OAuth
 
@@ -22,6 +31,14 @@ There are **94 Instagram tools** and **54 TikTok tools**. With one license, `too
 codex mcp add jsonscraper --url https://mcp.jsonscraper.com
 codex mcp login jsonscraper
 ```
+
+## Install with Composer
+
+```sh
+composer require jsonscraper/mcp-server:^0.3.2
+```
+
+Then configure one or both product license environment variables and run `vendor/bin/jsonscraper-mcp`. Hosted OAuth clients need no local Composer installation.
 
 ## Local stdio
 
@@ -61,6 +78,6 @@ Ask “Check my connected licenses” to call `jsonscraper_get_license_info`. Th
 composer test
 ```
 
-Runtime release: **0.3.1**. ChatGPT/Claude package release: **1.1.3**. The repository includes package sources under `chatgpt-plugin`, `client-plugin` and `claude-plugin`. Reviewer credentials stay in the private administration panel and are never included in public ZIPs. Review requires a walkthrough video and the publisher's verification of applicable third-party authorization.
+Runtime release: **0.3.2**. ChatGPT/Claude package release: **1.1.3**. The repository includes package sources under `chatgpt-plugin`, `client-plugin` and `claude-plugin`. Reviewer credentials stay in the private administration panel and are never included in public ZIPs. Review requires a walkthrough video and the publisher's verification of applicable third-party authorization.
 
 This is the common successor to `instagram-mcp-server` and `tiktok-mcp-server`. Product-specific hosted MCP endpoints have been retired. The Instagram and TikTok API products, licenses and response behavior remain separate.
