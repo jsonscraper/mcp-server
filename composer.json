@@ -22,7 +22,10 @@
     ]
   },
   "scripts": {
-    "test": "php tests/contract.php"
+    "test": [
+      "php tests/contract.php",
+      "php tests/cli.php"
+    ]
   },
   "homepage": "https://jsonscraper.com/mcp",
   "keywords": [

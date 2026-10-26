@@ -35,7 +35,7 @@ codex mcp login jsonscraper
 ## Install with Composer
 
 ```sh
-composer require jsonscraper/mcp-server:^0.3.2
+composer require jsonscraper/mcp-server:^0.3.3
 ```
 
 Then configure one or both product license environment variables and run `vendor/bin/jsonscraper-mcp`. Hosted OAuth clients need no local Composer installation.
@@ -78,6 +78,6 @@ Ask “Check my connected licenses” to call `jsonscraper_get_license_info`. Th
 composer test
 ```
 
-Runtime release: **0.3.2**. ChatGPT/Claude package release: **1.1.3**. The repository includes package sources under `chatgpt-plugin`, `client-plugin` and `claude-plugin`. Reviewer credentials stay in the private administration panel and are never included in public ZIPs. Review requires a walkthrough video and the publisher's verification of applicable third-party authorization.
+Runtime release: **0.3.3**. ChatGPT/Claude package release: **1.1.3**. The repository includes package sources under `chatgpt-plugin`, `client-plugin` and `claude-plugin`. Reviewer credentials stay in the private administration panel and are never included in public ZIPs. Review requires a walkthrough video and the publisher's verification of applicable third-party authorization.
 
 This is the common successor to `instagram-mcp-server` and `tiktok-mcp-server`. Product-specific hosted MCP endpoints have been retired. The Instagram and TikTok API products, licenses and response behavior remain separate.

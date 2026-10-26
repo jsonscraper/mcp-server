@@ -1,7 +1,7 @@
 #!/usr/bin/env php
 <?php
 declare(strict_types=1);
-require dirname(__DIR__).'/vendor/autoload.php';
+require dirname(__DIR__).'/src/load.php';
 use JsonScraper\Mcp\Factory;
 try{
  $verify=Factory::validator();$licenses=[];
