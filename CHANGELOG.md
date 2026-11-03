@@ -1,3 +1,9 @@
+# 0.3.7
+
+- Add `mcp_download_url` for downloading images, video and audio as files.
+- Route media previews through the shared CORS proxy.
+- Document preview and download links for all data tools.
+
 # 0.3.6
 
 - Document 40 curated localized workflows and direct invocation from MCP clients.

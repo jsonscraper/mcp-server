@@ -46,7 +46,7 @@ codex mcp login jsonscraper
 ## Install with Composer
 
 ```sh
-composer require jsonscraper/mcp-server:^0.3.6
+composer require jsonscraper/mcp-server:^0.3.7
 ```
 
 Then configure one or both product license environment variables and run `vendor/bin/jsonscraper-mcp`. Hosted OAuth clients need no local Composer installation.
@@ -79,6 +79,33 @@ Endpoint responses may contain profile identifiers, biographies, posts, comments
 
 MCP adds no response-content cache. Underlying API cache duration depends on endpoint settings. Privacy requests require email confirmation and manual ownership review; automatic service-wide suppression and cache removal must not be assumed. Do not claim access to private messages or protected accounts.
 
+## Media preview and download links
+
+Data tools route supported Instagram and TikTok image, video and audio URLs
+through `https://cors.jsonscraper.com`, including nested media variants. Existing
+media fields remain preview URLs. Responses containing media also include a
+`media_downloads` list with one entry per unique file:
+
+```json
+{
+  "media_downloads": [
+    {
+      "url": "https://cors.jsonscraper.com/?url=<encoded-source-url>",
+      "mcp_download_url": "https://cors.jsonscraper.com/?url=<encoded-source-url>&download=1"
+    }
+  ]
+}
+```
+
+Use `url` for preview/playback and `mcp_download_url` when the user wants to save
+a file. The download response uses `Content-Disposition: attachment` and a
+filename based on the actual media type. The delivery service supports CORS,
+HEAD and byte ranges. URLs retain the original signed source and its expiration;
+this does not archive media or consume another social API request. Files pass
+through jsonscraper's hosted media proxy, including for local stdio/self-hosted
+installations. Other API fields, pagination and product quotas remain unchanged.
+Raw product APIs and their SDKs keep their existing response format.
+
 ## Ready-to-use workflows
 
 The [setup guide](https://jsonscraper.com/mcp#recipes) includes 40 workflows (20 per product), with separate TikTok and Instagram tabs. Each begins with a profile overview, followed by video discovery, competitors, comments, creator search, content ideas and comparison snapshots. All 20 workflows on the selected product tab are visible immediately. Examples cover hashtag niches, music, locations, pinned posts, comment threads and license checks; each uses a bounded retrieval plan and its relevant API tools.
@@ -93,6 +120,6 @@ Ask “Check my connected licenses” to call `jsonscraper_get_license_info`. Th
 composer test
 ```
 
-Runtime release: **0.3.6**. ChatGPT/Claude package release: **1.1.4**. The repository includes package sources under `chatgpt-plugin`, `client-plugin` and `claude-plugin`. Reviewer credentials stay in the private administration panel and are never included in public ZIPs. Review requires a walkthrough video and the publisher's verification of applicable third-party authorization.
+Composer package release: **0.3.7**. ChatGPT/Claude package release: **1.1.4**. The repository includes package sources under `chatgpt-plugin`, `client-plugin` and `claude-plugin`. Reviewer credentials stay in the private administration panel and are never included in public ZIPs. Review requires a walkthrough video and the publisher's verification of applicable third-party authorization.
 
 This is the common successor to `instagram-mcp-server` and `tiktok-mcp-server`. Product-specific hosted MCP endpoints have been retired. The TikTok and Instagram API products, licenses and response behavior remain separate.
