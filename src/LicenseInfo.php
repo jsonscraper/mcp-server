@@ -3,13 +3,13 @@ declare(strict_types=1);
 namespace JsonScraper\Mcp;
 /** Account metadata only. Never returns credential, customer, payment or license identifiers. */
 final class LicenseInfo {
- public const PRODUCTS=['instagram'=>488899,'tiktok'=>132057];
+ public const PRODUCTS=['instagram'=>488899,'tiktok'=>132057,'uptimescout'=>478339];
  public function __construct(private ?\Closure $reader=null){}
  public static function definition():array {
-  return ['name'=>'jsonscraper_get_license_info','title'=>'Check my licenses and request quota','description'=>'Read the status, expiration and available request quota of the licenses already connected to this jsonscraper connection. With no product filter, checks all connected licenses. Does not consume a social-data API request. Missing values mean unavailable, not zero. No license keys, customer details or payment information are returned.','inputSchema'=>['type'=>'object','properties'=>(object)['product'=>['type'=>'string','enum'=>['tiktok','instagram'],'description'=>'Optional: check only this connected product. Omit to check all connected licenses.']],'additionalProperties'=>false],'securitySchemes'=>[['type'=>'oauth2','scopes'=>[]]],'annotations'=>['readOnlyHint'=>true,'destructiveHint'=>false,'idempotentHint'=>true,'openWorldHint'=>false]];
+  return ['name'=>'jsonscraper_get_license_info','title'=>'Check my licenses and request quota','description'=>'Read the status, expiration and available request quota of the licenses already connected to this jsonscraper connection. With no product filter, checks all connected licenses. Does not consume a social-data API request. Missing values mean unavailable, not zero. No license keys, customer details or payment information are returned.','inputSchema'=>['type'=>'object','properties'=>(object)['product'=>['type'=>'string','enum'=>['tiktok','instagram','uptimescout'],'description'=>'Optional: check only this connected product. Omit to check all connected licenses.']],'additionalProperties'=>false],'securitySchemes'=>[['type'=>'oauth2','scopes'=>[]]],'annotations'=>['readOnlyHint'=>true,'destructiveHint'=>false,'idempotentHint'=>true,'openWorldHint'=>false]];
  }
  public function get(array $licenses,array $arguments):array {
-  foreach($arguments as $key=>$value)if($key!=='product'||!is_string($value)||!isset(self::PRODUCTS[$value]))throw new \InvalidArgumentException('Use an optional product: instagram or tiktok.');
+  foreach($arguments as $key=>$value)if($key!=='product'||!is_string($value)||!isset(self::PRODUCTS[$value]))throw new \InvalidArgumentException('Use an optional product: instagram, tiktok or uptimescout.');
   $selected=isset($arguments['product'])?[$arguments['product']]:array_keys($licenses);$rows=[];
   foreach($selected as $product){
    if(!isset($licenses[$product])){$rows[]=['product'=>$product,'status'=>'not_connected','message'=>'This product license is not connected. Reconnect jsonscraper and add the license on its authorization page. Never send the key in chat.'];continue;}

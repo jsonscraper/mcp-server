@@ -123,3 +123,12 @@ composer test
 Composer package release: **0.3.7**. ChatGPT/Claude package release: **1.1.4**. The repository includes package sources under `chatgpt-plugin`, `client-plugin` and `claude-plugin`. Reviewer credentials stay in the private administration panel and are never included in public ZIPs. Review requires a walkthrough video and the publisher's verification of applicable third-party authorization.
 
 This is the common successor to `instagram-mcp-server` and `tiktok-mcp-server`. Product-specific hosted MCP endpoints have been retired. The TikTok and Instagram API products, licenses and response behavior remain separate.
+
+
+## UptimeScout regional availability
+
+Connect an UptimeScout license through the same OAuth connector. Its seven read-only tools use the `uptimescout:read` scope and the license’s normal quota. Select an observation country with `region` and description language with `lang`; they are independent. Responses include `available_regions`, localized `description`, `description_language`, and a versioned own-domain `logo_url`. Read the observation timestamp and freshness before describing availability.
+
+See [UptimeScout endpoints](docs/uptimescout-endpoints.json) and [setup](https://jsonscraper.com/services/uptimescout-api#connect). The dedicated Bearer endpoint is `https://mcp.uptimescout.com/mcp`.
+
+For the shared stdio transport, set `JSONSCRAPER_UPTIMESCOUT_LICENSE_KEY` in the client environment. It can be used independently or alongside other licensed products.

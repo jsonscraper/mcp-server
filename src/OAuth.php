@@ -6,7 +6,7 @@ final class OAuth {
  public readonly string $resource;
  public readonly string $issuer;
  private string $scope;
- public function __construct(private string $product,private string $label,private string $origin,private Store $store,private string $encryptionKey,private \Closure $verify){$this->resource=$origin;$this->issuer=$origin.'/oauth';$this->scope='instagram:read tiktok:read';if(strlen($encryptionKey)!==32)throw new \InvalidArgumentException('OAuth encryption key must be 32 bytes.');}
+ public function __construct(private string $product,private string $label,private string $origin,private Store $store,private string $encryptionKey,private \Closure $verify){$this->resource=$origin;$this->issuer=$origin.'/oauth';$this->scope='instagram:read tiktok:read uptimescout:read';if(strlen($encryptionKey)!==32)throw new \InvalidArgumentException('OAuth encryption key must be 32 bytes.');}
  public function metadata(bool $resource): HttpResponse {return HttpResponse::json($resource?['resource'=>$this->resource,'resource_name'=>'jsonscraper','authorization_servers'=>[$this->issuer],'scopes_supported'=>explode(' ',$this->scope),'bearer_methods_supported'=>['header']]:['issuer'=>$this->issuer,'authorization_endpoint'=>$this->issuer.'/authorize','token_endpoint'=>$this->issuer.'/token','registration_endpoint'=>$this->issuer.'/register','revocation_endpoint'=>$this->issuer.'/revoke','response_types_supported'=>['code'],'grant_types_supported'=>['authorization_code','refresh_token'],'token_endpoint_auth_methods_supported'=>['none'],'code_challenge_methods_supported'=>['S256'],'scopes_supported'=>explode(' ',$this->scope),'authorization_response_iss_parameter_supported'=>true],200,['Cache-Control'=>'public, max-age=300']);}
  public function register(array $input,string $ip): HttpResponse {
   $this->limit('registration:'.$ip,30,3600);$uris=$input['redirect_uris']??[];
@@ -27,7 +27,7 @@ final class OAuth {
   if(!$pending||$csrf===''||!hash_equals($pending['csrf'],hash('sha256',$csrf))||!hash_equals($csrf,(string)($cookies[$cookieName]??'')))throw new OAuthFailure('invalid_request','The authorization form expired. Start the connection again.');
   $licenses=isset($pending['licenses'])?json_decode($this->decrypt($pending['licenses']),true,8,JSON_THROW_ON_ERROR):[];
   $action=(string)($post['action']??'connect');$errors=[];
-  foreach(['tiktok','instagram'] as $product){
+  foreach(['tiktok','instagram','uptimescout'] as $product){
    if($action==='remove_'.$product){unset($licenses[$product]);continue;}
    $key=trim((string)($post[$product.'_license_key']??''));
    if($key!==''){
@@ -62,7 +62,7 @@ final class OAuth {
  public function license(string $bearer): ?string {
   if(str_starts_with($bearer,'mcp_access_')){$record=$this->store->get('access:'.hash('sha256',$bearer));if(!$record||($record['resource']??'')!==$this->resource||!isset($record['scope'])||($record['expires']??0)<time())return null;return $this->decrypt($record['license']);}
   if(!$this->validLicense($bearer))return null;$cache='verified:'.hash('sha256',$bearer);$record=$this->store->get($cache);if($record)return $this->decrypt($record['licenses']);
-  $licenses=[];foreach(['tiktok','instagram'] as $product)if(($this->verify)($bearer,$product))$licenses[$product]=$bearer;
+  $licenses=[];foreach(['tiktok','instagram','uptimescout'] as $product)if(($this->verify)($bearer,$product))$licenses[$product]=$bearer;
   if(!$licenses)return null;$encoded=json_encode($licenses,JSON_THROW_ON_ERROR);$this->store->put($cache,['licenses'=>$this->encrypt($encoded)],300);return $encoded;
  }
  public function challenge(): HttpResponse {return HttpResponse::json(['error'=>'unauthorized','message'=>'Use your existing '.$this->label.' API license as a Bearer token, or connect with OAuth.'],401,['WWW-Authenticate'=>'Bearer resource_metadata="'.$this->origin.'/.well-known/oauth-protected-resource'.'", scope="'.$this->scope.'"']);}
@@ -81,8 +81,8 @@ final class OAuth {
  }
  private function licenseFields(array $connected,array $copy): string {
   $e=static fn($s)=>htmlspecialchars($s,ENT_QUOTES|ENT_SUBSTITUTE,'UTF-8');$html='';
-  foreach(['tiktok'=>'TikTok','instagram'=>'Instagram'] as $product=>$label){$ready=in_array($product,$connected,true);
-   $html.='<fieldset style="margin:16px 0;padding:16px;border:1px solid #e2e8f0;border-radius:12px"><legend>'.$label.' Scraper API</legend>';
+  foreach(['tiktok'=>'TikTok','instagram'=>'Instagram','uptimescout'=>'UptimeScout'] as $product=>$label){$ready=in_array($product,$connected,true);
+   $html.='<fieldset style="margin:16px 0;padding:16px;border:1px solid #e2e8f0;border-radius:12px"><legend>'.$label.($product==='uptimescout'?' API':' Scraper API').'</legend>';
    if($ready)$html.='<p role="status" style="color:#15803d">✓ '.$e($copy['connected']).'</p><button name="action" value="remove_'.$product.'" style="background:#fff;color:#475569;border-color:#cbd5e1">'.$e($copy['remove']).'</button>';
    else $html.='<label>'.$e($copy['key']).'<input dir="ltr" type="password" name="'.$product.'_license_key" minlength="10" maxlength="200" autocomplete="off" spellcheck="false"></label><button name="action" value="check_'.$product.'" style="background:#fff;color:#c74700">'.$e($copy['check']).'</button>';
    $html.='</fieldset>';

@@ -1,0 +1,10 @@
+<?php
+declare(strict_types=1);
+require __DIR__.'/../vendor/autoload.php';
+use JsonScraper\Mcp\Factory;
+$count=0;$calls=[];$check=static function(bool $ok,string $why)use(&$count){$count++;if(!$ok)throw new RuntimeException($why);};
+$protocol=Factory::protocol(static function($product,$path,$args,$key)use(&$calls){$calls[]=[$product,$path,$args,$key];return ['status'=>'ok','region'=>$args['region']??null,'available_regions'=>['GB','DE'],'service'=>['id'=>$args['service']??'github','logo_url'=>'https://uptimescout.com/static/brand-assets/github.svg?v=fixture','description'=>'Plattform für Git-Repositories.','description_language'=>$args['lang']??'en']];});
+$credentials=json_encode(['uptimescout'=>'fixture']);$tools=$protocol->dispatch(['jsonrpc'=>'2.0','id'=>1,'method'=>'tools/list'],$credentials)['result']['tools'];$uptime=array_values(array_filter($tools,static fn($t)=>str_starts_with($t['name'],'uptimescout_')));$check(count($uptime)===7,'Expected seven licensed UptimeScout tools.');foreach($uptime as $tool){$check(isset($tool['inputSchema']['properties']['lang']),'Language property missing.');$check($tool['securitySchemes'][0]['scopes']===['uptimescout:read'],'Wrong scope.');}
+$request=['jsonrpc'=>'2.0','id'=>2,'method'=>'tools/call','params'=>['name'=>'uptimescout_status','arguments'=>['service'=>'github','region'=>'DE','lang'=>'de']]];$result=$protocol->dispatch($request,$credentials);$check($calls[0]===['uptimescout','/status',['service'=>'github','region'=>'DE','lang'=>'de'],'fixture'],'Country or language lost in transport.');$check($result['result']['structuredContent']['service']['description_language']==='de','Localized metadata lost.');$check(str_starts_with($result['result']['structuredContent']['service']['logo_url'],'https://uptimescout.com/'),'Own-domain logo lost.');
+$request['params']['arguments']['lang']='invalid';$check(isset($protocol->dispatch($request,$credentials)['error']),'Invalid language accepted.');$check(count($calls)===1,'Invalid arguments reached the API.');
+echo "UptimeScout regional MCP: $count checks passed.\n";

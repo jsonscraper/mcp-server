@@ -1,0 +1,268 @@
+[
+  {
+    "name": "services",
+    "description": "Search the catalog to discover exact service IDs and categories. Uses the UptimeScout license and its normal quota. Read observed_at, stale and region before describing availability. Missing or stale data is unknown.",
+    "path": "/v1/services",
+    "parameters": [
+      {
+        "name": "region",
+        "optional": true,
+        "description": "Collected ISO observation country, for example GB, DE or JP. Independent of interface language.",
+        "default": ""
+      },
+      {
+        "name": "q",
+        "optional": true,
+        "description": "Search service name or ID.",
+        "default": ""
+      },
+      {
+        "name": "category",
+        "optional": true,
+        "description": "Exact category value returned by the service catalog.",
+        "default": ""
+      },
+      {
+        "name": "status",
+        "optional": true,
+        "description": "Filter normalized signals; unknown also covers stale or unavailable observations.",
+        "default": ""
+      },
+      {
+        "name": "limit",
+        "optional": true,
+        "description": "Page size. Use next_offset to continue; do not request repeated first pages.",
+        "default": ""
+      },
+      {
+        "name": "offset",
+        "optional": true,
+        "description": "Pagination offset returned as next_offset.",
+        "default": ""
+      },
+      {
+        "name": "lang",
+        "in": "query",
+        "required": false,
+        "type": "string",
+        "description": "Language of service descriptions. Responses include description_language and a versioned own-domain logo_url."
+      }
+    ]
+  },
+  {
+    "name": "status",
+    "description": "Read the latest saved regional observation for one service. Uses the UptimeScout license and its normal quota. Read observed_at, stale and region before describing availability. Missing or stale data is unknown.",
+    "path": "/v1/status",
+    "parameters": [
+      {
+        "name": "service",
+        "optional": false,
+        "description": "Exact service ID returned by uptimescout_services, for example github.",
+        "default": ""
+      },
+      {
+        "name": "region",
+        "optional": true,
+        "description": "Collected ISO observation country, for example GB, DE or JP. Independent of interface language.",
+        "default": ""
+      },
+      {
+        "name": "lang",
+        "in": "query",
+        "required": false,
+        "type": "string",
+        "description": "Language of service descriptions. Responses include description_language and a versioned own-domain logo_url."
+      }
+    ]
+  },
+  {
+    "name": "statuses",
+    "description": "Read several service statuses in one quota-counted batch request. Uses the UptimeScout license and its normal quota. Read observed_at, stale and region before describing availability. Missing or stale data is unknown.",
+    "path": "/v1/statuses",
+    "parameters": [
+      {
+        "name": "services",
+        "optional": false,
+        "description": "Comma-separated service IDs from the catalog, for example github,cloudflare. Batch maximum depends on the license.",
+        "default": ""
+      },
+      {
+        "name": "region",
+        "optional": true,
+        "description": "Collected ISO observation country, for example GB, DE or JP. Independent of interface language.",
+        "default": ""
+      },
+      {
+        "name": "lang",
+        "in": "query",
+        "required": false,
+        "type": "string",
+        "description": "Language of service descriptions. Responses include description_language and a versioned own-domain logo_url."
+      }
+    ]
+  },
+  {
+    "name": "summary",
+    "description": "Summarize current regional signals; services optionally restricts the summary to selected IDs. Uses the UptimeScout license and its normal quota. Read observed_at, stale and region before describing availability. Missing or stale data is unknown.",
+    "path": "/v1/summary",
+    "parameters": [
+      {
+        "name": "services",
+        "optional": true,
+        "description": "Comma-separated service IDs from the catalog, for example github,cloudflare. Batch maximum depends on the license.",
+        "default": ""
+      },
+      {
+        "name": "region",
+        "optional": true,
+        "description": "Collected ISO observation country, for example GB, DE or JP. Independent of interface language.",
+        "default": ""
+      },
+      {
+        "name": "q",
+        "optional": true,
+        "description": "Search service name or ID.",
+        "default": ""
+      },
+      {
+        "name": "category",
+        "optional": true,
+        "description": "Exact category value returned by the service catalog.",
+        "default": ""
+      },
+      {
+        "name": "lang",
+        "in": "query",
+        "required": false,
+        "type": "string",
+        "description": "Language of service descriptions. Responses include description_language and a versioned own-domain logo_url."
+      }
+    ]
+  },
+  {
+    "name": "history",
+    "description": "Read saved observations over a lookback window; history may be paginated and gaps remain unknown. Uses the UptimeScout license and its normal quota. Read observed_at, stale and region before describing availability. Missing or stale data is unknown.",
+    "path": "/v1/history",
+    "parameters": [
+      {
+        "name": "service",
+        "optional": false,
+        "description": "Exact service ID returned by uptimescout_services, for example github.",
+        "default": ""
+      },
+      {
+        "name": "region",
+        "optional": true,
+        "description": "Collected ISO observation country, for example GB, DE or JP. Independent of interface language.",
+        "default": ""
+      },
+      {
+        "name": "limit",
+        "optional": true,
+        "description": "Page size. Use next_offset to continue; do not request repeated first pages.",
+        "default": ""
+      },
+      {
+        "name": "offset",
+        "optional": true,
+        "description": "Pagination offset returned as next_offset.",
+        "default": ""
+      },
+      {
+        "name": "hours",
+        "optional": true,
+        "description": "Lookback window in hours. License history depth also applies; 24 means the past day.",
+        "default": ""
+      },
+      {
+        "name": "lang",
+        "in": "query",
+        "required": false,
+        "type": "string",
+        "description": "Language of service descriptions. Responses include description_language and a versioned own-domain logo_url."
+      }
+    ]
+  },
+  {
+    "name": "stats",
+    "description": "Summarize all available samples in the requested window; operational_sample_percent is a sample ratio, never measured uptime. Uses the UptimeScout license and its normal quota. Read observed_at, stale and region before describing availability. Missing or stale data is unknown.",
+    "path": "/v1/stats",
+    "parameters": [
+      {
+        "name": "service",
+        "optional": false,
+        "description": "Exact service ID returned by uptimescout_services, for example github.",
+        "default": ""
+      },
+      {
+        "name": "region",
+        "optional": true,
+        "description": "Collected ISO observation country, for example GB, DE or JP. Independent of interface language.",
+        "default": ""
+      },
+      {
+        "name": "hours",
+        "optional": true,
+        "description": "Lookback window in hours. License history depth also applies; 24 means the past day.",
+        "default": ""
+      },
+      {
+        "name": "lang",
+        "in": "query",
+        "required": false,
+        "type": "string",
+        "description": "Language of service descriptions. Responses include description_language and a versioned own-domain logo_url."
+      }
+    ]
+  },
+  {
+    "name": "incidents",
+    "description": "List fresh elevated disruption signals; an empty result does not prove measured uptime or confirmed absence of incidents. Uses the UptimeScout license and its normal quota. Read observed_at, stale and region before describing availability. Missing or stale data is unknown.",
+    "path": "/v1/incidents",
+    "parameters": [
+      {
+        "name": "services",
+        "optional": true,
+        "description": "Comma-separated service IDs from the catalog, for example github,cloudflare. Batch maximum depends on the license.",
+        "default": ""
+      },
+      {
+        "name": "region",
+        "optional": true,
+        "description": "Collected ISO observation country, for example GB, DE or JP. Independent of interface language.",
+        "default": ""
+      },
+      {
+        "name": "q",
+        "optional": true,
+        "description": "Search service name or ID.",
+        "default": ""
+      },
+      {
+        "name": "category",
+        "optional": true,
+        "description": "Exact category value returned by the service catalog.",
+        "default": ""
+      },
+      {
+        "name": "limit",
+        "optional": true,
+        "description": "Page size. Use next_offset to continue; do not request repeated first pages.",
+        "default": ""
+      },
+      {
+        "name": "offset",
+        "optional": true,
+        "description": "Pagination offset returned as next_offset.",
+        "default": ""
+      },
+      {
+        "name": "lang",
+        "in": "query",
+        "required": false,
+        "type": "string",
+        "description": "Language of service descriptions. Responses include description_language and a versioned own-domain logo_url."
+      }
+    ]
+  }
+]

@@ -1,6 +1,6 @@
 {
   "name": "jsonscraper/mcp-server",
-  "description": "jsonscraper MCP server with independently licensed Instagram and TikTok tools",
+  "description": "jsonscraper MCP server with independently licensed Instagram, TikTok and UptimeScout tools",
   "type": "library",
   "license": "MIT",
   "require": {
@@ -25,7 +25,8 @@
     "test": [
       "php tests/contract.php",
       "php tests/cli.php",
-      "php tests/media.php"
+      "php tests/media.php",
+      "php tests/uptimescout.php"
     ]
   },
   "homepage": "https://jsonscraper.com/mcp",
